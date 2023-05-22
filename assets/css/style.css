@@ -5,3 +5,11 @@
 body {
     background: #182c25;
 }
+
+.title-container {
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid orange;
+}
+
+

@@ -16,7 +16,7 @@ body {
     justify-content: space-between;
 
     align-items: center; 
-    min-height: 640px;
+    height: 90%;
     /* Maybe change the height to 90%- test it as mobile first responsive! */
 }
 
@@ -30,6 +30,9 @@ body {
     width: 35%;
     border: 2px solid red;
 }
+/* The background-size property is set to 200% auto to make the gradient wider than the key element to allow
+animation to smoothly transition through the colors. animation property is used to create an animation called rainbowAnimation. 
+It moves the background position from 0% to 100% over a duration of 5 seconds=> continuous rainbow effect. The infinite keyword ensures the animation repeats indefinitely. */
 
 .keyboard-key-container {
     display: flex;
@@ -37,4 +40,27 @@ body {
     width: 65%;
     border: 2px solid red;
 }
+
+.keyboard-key {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 200% auto;
+    animation: rainbowAnimation 5s linear infinite;
+}
+      
+@keyframes rainbowAnimation {
+    0% { background-position: 0% }
+    100% { background-position: 100% }
+}
+      
+
 

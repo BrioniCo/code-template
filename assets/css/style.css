@@ -1,5 +1,5 @@
 * {
-    font-family : "Lexend", sans-serif;
+    font-family: "Lexend", sans-serif;
 }
 
 body {
@@ -41,25 +41,23 @@ It moves the background position from 0% to 100% over a duration of 5 seconds=> 
     border: 2px solid red;
 }
 
-.keyboard-key {
+.keyboard-key-container button {
     display: inline-block;
-    width: 40px;
+    width: 35px;
     height: 40px;
-    margin: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 2px;
+    font-size: 14px;
     text-align: center;
     line-height: 40px;
     cursor: pointer;
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    background: #FEF601;
     background-size: 200% auto;
-    animation: rainbowAnimation 5s linear infinite;
 }
-      
-@keyframes rainbowAnimation {
-    0% { background-position: 0% }
-    100% { background-position: 100% }
+
+.keyboard-key-container button:nth-child(25), 
+.keyboard-key-container button:nth-child(26) {
+    width: 50px;
 }
       
 

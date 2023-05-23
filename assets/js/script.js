@@ -1,7 +1,19 @@
-// getWord function will be inseparate js file called words
+document.addEventListener("DOMContentLoaded", () => {
+  function createTiles() {
+    const gameBoard = getElementById("tile-board")
+
+    for (let index = 0; index < 9; index++) {
+      let tile = document.createELement("div")
+      tile.classList.add("tile")
+      tile.setAttribute("id", index +1)
+      gameBoard.appendChild(tile)
+    }
+  }
+})
+
 // Pulling elements from the DOM to manipulate. image and lettertiles will correspond to each other.
 const image = document.querySelector("clue-image-container");
-const letterTiles = document.querySelector("letter-tile-container");
+// const letterTiles = document.querySelector("letter-tile-container");
 const keyboard = document.querySelector(".keyboard-key-container"); // Corrected selector
 
 // Now i need to list the keys for my keyboard in alphabetic order to make it easier for children.-Ask tutor about this, would it be better as a shuffle of letters needed for word?
@@ -12,16 +24,16 @@ const keys = [
 ]
 
 // Here are the rows for attemptRows, these rows will be used to create letter tiles
-const attemptRows = [
-  ["", "", ""],
-  ["", "", ""],
-  ["", "", ""]
-]
+// const attemptRows = [
+//   ["", "", ""],
+//   ["", "", ""],
+//   ["", "", ""]
+// ]
 const handleClick = () => {
   console.log("clicked")
 }
 
-// Create a button for each key
+// Create a button for each key in the keyboard container div. 
 keys.forEach (key => {
     const buttonObject = document.createElement("button");
     buttonObject.textContent = key;
@@ -30,7 +42,9 @@ keys.forEach (key => {
     buttonObject.addEventListener("click", handleClick);
   });
   
-  attemptRows.forEach((attemptRow, attemptRowIndex) => {
-   const rowElement = document.createElement("div");
-   rowElement.setAttribute("id", "attemptRow" + attemptRowIndex)
-  })
+  // attemptRows.forEach((attemptRow, attemptRowIndex) => {
+  //  const rowElement = document.createElement("div");
+  //  rowElement.setAttribute("id", "attemptRow" + attemptRowIndex);
+  // //  Now put this in the letter tiles
+  // letterTiles.append(rowElement)
+  // })

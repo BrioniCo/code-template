@@ -1,4 +1,10 @@
 * {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
     font-family: "Lexend", sans-serif;
 }
 
@@ -10,11 +16,10 @@ body {
     font-size: 250%;
 }
 
-.main-game-container {
+#main-game-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     align-items: center; 
     height: 90%;
     /* Maybe change the height to 90%- test it as mobile first responsive! */
@@ -26,24 +31,38 @@ body {
     border-bottom: 1px solid orange;
 }
 
-.letter-tile-container {
-    width: 35%;
+#letter-tile-container {
+    width: 30%;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+#tile-board {
+    display: grid;
+    grid-template-columns: repeat (3, 1fr);
+    grid-gap: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.tile {
     border: 2px solid red;
 }
-/* The background-size property is set to 200% auto to make the gradient wider than the key element to allow
-animation to smoothly transition through the colors. animation property is used to create an animation called rainbowAnimation. 
-It moves the background position from 0% to 100% over a duration of 5 seconds=> continuous rainbow effect. The infinite keyword ensures the animation repeats indefinitely. */
 
 .keyboard-key-container {
     display: flex;
     flex-wrap: wrap;
-    width: 65%;
+    width: 60%;
     border: 2px solid red;
 }
 
 .keyboard-key-container button {
     display: inline-block;
-    width: 35px;
+    width: 45px;
     height: 40px;
     border: 1px solid #ccc;
     border-radius: 2px;
@@ -52,7 +71,7 @@ It moves the background position from 0% to 100% over a duration of 5 seconds=> 
     line-height: 40px;
     cursor: pointer;
     background: #FEF601;
-    background-size: 200% auto;
+    background-size: 100%;
 }
 
 .keyboard-key-container button:nth-child(25), 

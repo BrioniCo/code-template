@@ -53,56 +53,49 @@ body {
     min-height: 80px;
     font-size: 2rem;
     font-weight: bold;
+    color: #FEF601;
 }
-    /* width: 30%;
-    border: 2px solid red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
     
-} */ 
-/* #letter-board-container div {
-    display : flex;
-}
-
-#letter-board .tile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    box-sizing: border-box;
-    border: 2px solid red;
-    min-width: 60px;
-    min-height: 60px;
-    margin: 2px; */
-
-
-.keyboard-key-container {
+#keyboard-container {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
-    border: 2px solid red;
+    width: 70%;
+}
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 8px;
+    touch-action: manipulation;
 }
 
-.keyboard-key-container button {
+.keyboard-row button {
     display: inline-block;
-    width: 45px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border: 1px solid #ccc;
+
     border-radius: 2px;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     line-height: 40px;
+    flex-grow: 1;
+
     cursor: pointer;
     background: #FEF601;
-    background-size: 100%;
+    font-family: inherit;
+    font-weight: bold;
+    user-select: none;
 }
 
-.keyboard-key-container button:nth-child(25), 
-.keyboard-key-container button:nth-child(26) {
-    width: 50px;
+.keyboard-row button.wide-button {
+    flex-grow: 1.5;
 }
+
+/* #keyboard-key-container button:nth-child(25), 
+#keyboard-key-container button:nth-child(26) {
+    width: 50px;
+} */
      
 
 

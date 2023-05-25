@@ -1,15 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // code for painting the letter tiles onto the DOM
   function createTiles() {
-    const gameBoard = getElementById("tile-board")
+    const gameBoard = document.getElementById("letter-board")
 
     for (let index = 0; index < 9; index++) {
-      let tile = document.createELement("div")
+      let tile = document.createElement("div")
       tile.classList.add("tile")
       tile.setAttribute("id", index +1)
       gameBoard.appendChild(tile)
     }
   }
-})
+  createTiles()
+  });
 
 // Pulling elements from the DOM to manipulate. image and lettertiles will correspond to each other.
 const image = document.querySelector("clue-image-container");
@@ -20,7 +22,7 @@ const keyboard = document.querySelector(".keyboard-key-container"); // Corrected
 // Leave it as a constant array for now but maight come back in and change it to a shuffle that contains only the keys contained in word
 
 const keys = [
-"a", "b", "c", "d","e","f", "g", "h","i", "j","k", "l","m", "n","o", "p", "q", "r", "s", "t", "u", "v", "w", "y", "enter", "<"
+"a", "b", "c", "d","e","f", "g", "h","i", "j","k", "l","m", "n","o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "enter", "<"
 ]
 
 // Here are the rows for attemptRows, these rows will be used to create letter tiles

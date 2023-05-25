@@ -31,9 +31,7 @@ body {
     border-bottom: 1px solid orange;
 }
 
-#letter-tile-container {
-    width: 30%;
-    border: 2px solid red;
+#letter-board-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,22 +39,49 @@ body {
     overflow: hidden;
 }
 
-#tile-board {
+#letter-board {
     display: grid;
-    grid-template-columns: repeat (3, 1fr);
-    grid-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
     padding: 10px;
     box-sizing: border-box;
 }
 
 .tile {
-    border: 2px solid red;
+    border: 2px solid #C62293;
+    min-width: 80px;
+    min-height: 80px;
+    font-size: 2rem;
+    font-weight: bold;
 }
+    /* width: 30%;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    
+} */ 
+/* #letter-board-container div {
+    display : flex;
+}
+
+#letter-board .tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    box-sizing: border-box;
+    border: 2px solid red;
+    min-width: 60px;
+    min-height: 60px;
+    margin: 2px; */
+
 
 .keyboard-key-container {
     display: flex;
     flex-wrap: wrap;
-    width: 60%;
+    width: 50%;
     border: 2px solid red;
 }
 
@@ -78,6 +103,6 @@ body {
 .keyboard-key-container button:nth-child(26) {
     width: 50px;
 }
-      
+     
 
 

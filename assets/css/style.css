@@ -51,9 +51,13 @@ body {
     border: 2px solid #C62293;
     min-width: 80px;
     min-height: 80px;
-    font-size: 2rem;
+    font-size: 50px;
     font-weight: bold;
     color: #FEF601;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
     
 #keyboard-container {

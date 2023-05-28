@@ -6,16 +6,16 @@
 
 const words = [{
     word: "bus",
-    image: url(""),
+    image: "assets/",
 },{
     word: "dog",
-    image: url("",)
+    image: "assets/",
 },{
     word: "car",
-    image: url(""), 
+    image: "assets/", 
 },{
     word: "cow",
-    image: url(""),  
+    image: "assets/",  
 },{
     word: "pig",
     image: url(""), 
@@ -43,7 +43,69 @@ const words = [{
 },{
     word: "you",
     image: url(""),
+
+    ,{
+        word: "pen",
+        image: url(""), 
+    },{
+        word: "cup",
+        image: url(""), 
+    },{
+        word: "bat",
+        image: url(""), 
+    },{
+        word: "",
+        image: url(""), 
+    },{
+        word: "",
+        image: url(""), 
+    },{
+        word: "",
+        image: url(""),
+    },{
+        word: "",
+        image: url(""),
+        
 }]
+
+
+
+
+Bat
+Sun
+Box
+Jam
+Leg
+Toy
+Bus
+Egg
+Arm
+Lip
+Cow
+Fan
+Bed
+Key
+Rug
+Air
+Bus
+Day
+Ear
+Fly
+Gum
+Hot
+Ice
+Job
+Kit
+Lap
+Man
+Nap
+Owl
+Pit
+Ram
+Sky
+Toy
+Van
+Wax
 
 // /**
 //  * Return random word and image from array of words 

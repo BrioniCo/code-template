@@ -120,6 +120,21 @@ function updateGuessedWords(letter) {
   availableTilesEl.textContent = letter;
   }
 }
+   /**
+     * Handles deleted letters and updates array accordingly- ie takes current word
+     * array and reassigns it without the deleted letter
+     */
+function handleDeleteLetter() {
+  const currentWordArray = getCurrentWordArray();
+  const removedLetter = currentWordArray.pop();
+
+  guessedWords[guessedWords.length -1 ] = currentWordArray;
+
+  const lastLetterEl = document.getElementById(String(availableSpace - 1));
+
+  lastLetterEl.textContent = "";
+  availableSpace = availableSpace - 1;
+}
 
 /*Iterate over each keyboard key and create an on-click handler function */
 // RESEARCH!:-Is it ok that letter only has a local scope here?
@@ -130,7 +145,11 @@ for (let i = 0; i < keys.length; i++) {
     if (letter === 'enter') {
       handleSubmitWord()
       return;
+    }
 
+    if (letter === 'del') {
+      handleDeleteLetter()
+      return
     }
 
     updateGuessedWords(letter);

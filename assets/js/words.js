@@ -6,16 +6,16 @@
 
 const words = [{
     word: "bus",
-    image: "assets/",
+    image: "assets/images/bus.png",
 },{
     word: "dog",
-    image: "assets/",
+    image: "assets/images/dog-icon.png",
 },{
     word: "car",
-    image: "assets/", 
+    image: "assets/images/car-icon.png", 
 },{
     word: "cow",
-    image: "assets/",  
+    image: "assets/images/cow-icon.png",  
 },{
     word: "pig",
     image: url(""), 
@@ -24,7 +24,7 @@ const words = [{
     image: url(""), 
 },{
     word: "bee",
-    image: url(""), 
+    image: "assets/images/bee.png", 
 },{
     word: "pie",
     image: url(""), 
@@ -43,57 +43,69 @@ const words = [{
 },{
     word: "you",
     image: url(""),
-
-    ,{
-        word: "pen",
-        image: url(""), 
-    },{
-        word: "cup",
-        image: url(""), 
-    },{
-        word: "bat",
-        image: url(""), 
-    },{
-        word: "",
-        image: url(""), 
-    },{
-        word: "",
-        image: url(""), 
-    },{
-        word: "",
-        image: url(""),
-    },{
-        word: "",
-        image: url(""),
-        
+},{
+    word: "pen",
+    image: url(""), 
+},{
+    word: "cup",
+    image: url(""), 
+},{
+    word: "bat",
+    image: url("assets/images/bat-icon.png"), 
+},{
+    word: "sun",
+    image: url(""), 
+},{
+    word: "box",
+    image: url(""), 
+},{
+    word: "jam",
+    image: url(""),
+},{
+    word: "leg",
+    image: url(""),
+},{
+    word: "toy",
+    image: url(""), 
+},{
+    word: "bus",
+    image: url(""), 
+},{
+    word: "egg",
+    image: url(""),
+},{
+    word: "arm",
+    image: url(""),
+},{
+    word: "lip",
+    image: url(""), 
+},{
+    word: "cow",
+    image: url(""), 
+},{
+    word: "fan",
+    image: url(""),
+},{
+    word: "bed",
+    image: url(""),
+},{
+    word: "key",
+    image: url(""), 
+},{
+    word: "rug",
+    image: url(""), 
+},{
+    word: "fly",
+    image: url(""),
+},{
+    word: "ice",
+    image: url(""),
 }]
 
-
-
-
-Bat
-Sun
-Box
-Jam
-Leg
-Toy
-Bus
-Egg
-Arm
-Lip
-Cow
-Fan
-Bed
-Key
-Rug
-Air
-Bus
 Day
-Ear
-Fly
-Gum
+
 Hot
-Ice
+
 Job
 Kit
 Lap

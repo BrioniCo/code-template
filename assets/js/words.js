@@ -4,7 +4,7 @@
 
 // Arrays of words: 3, 4 and 5, each with associated image 
 
-const words = [{
+const wordCollection = [{
     word: "bus",
     image: "assets/images/bus.png",
 },{

@@ -7,17 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // code for painting the letter tiles onto the DOM
   function createTiles() {
     const gameBoard = document.getElementById("letter-board")
-
-     // Call getRandomWord() to get a random word object
-  const randomWord = getRandomWord();
-
-  // Display the word and image
-  const clueImageContainer = document.querySelector(".clue-image-container");
-  const wordImage = document.createElement("img");
-  wordImage.src = randomWord.image;
-  clueImageContainer.appendChild(wordImage);
-
-
+ 
     for (let index = 0; index < 9; index++) {
       let tile = document.createElement("div");
       tile.classList.add("tile");
@@ -27,33 +17,56 @@ document.addEventListener("DOMContentLoaded", () => {
       gameBoard.appendChild(tile);
     }
   }
-  createTiles()
-  });
 
+  createTiles()
+
+   // Call getRandomWord() to get a random word object
+   const randomWord = getRandomWord();
+   // Display the word and image
+   const clueImageContainer = document.querySelector(".clue-image-container");
+   const wordImage = document.createElement("img");
+   wordImage.src = randomWord.image;
+   clueImageContainer.appendChild(wordImage);
+ 
     /**
      * Takes a random word with accompanyiong image from the words array
      *
      */
     function getRandomWord() {
-      const randomIndex = Math.floor(Math.random() * words.length);
-      return words[randomIndex];
+      let randomWOrd = wordCollection[];
+      const randomWordIndex = Math.floor(Math.random() * wordCollection.length);
+      return wordCollection[randomWordIndex];
     }
      
-  // const initGame = () => {
-  //   let randomWord = words[Math.floor(Math.random() * words.length)];
-  // }
-
 // Pulling elements from the DOM to manipulate. image and lettertiles will correspond to each other.
 
-const picture = document.querySelector("clue-image-container");
+const picture = document.querySelector(".clue-image-container");
 const keyboard = document.getElementById("keyboard-container");
 const keys = document.querySelectorAll('.keyboard-row > button');
-let guessedWords = [[]];
-let availableTiles = 1;
 
 let word = "cow";
 let guessedWordCount = 0;
 
+/*Iterate over each keyboard key and create an on-click handler function */
+// RESEARCH!:-Is it ok that letter only has a local scope here?
+for (let i = 0; i < keys.length; i++) {
+  keys[i].onclick = ({ target }) => {
+    const letter = target.getAttribute("data-key");
+
+    if (letter === 'enter') {
+      handleSubmitWord()
+      return;
+    }
+
+    if (letter === 'del') {
+      handleDeleteLetter()
+      return
+    }
+
+    updateGuessedWords(letter);
+  };
+  
+}
    /**
      * checks which letter tiles contain the right letter 
      * in the right place and allow it to change color accordingly
@@ -77,23 +90,26 @@ function getTileColor(letter, index) {
 
 function handleSubmitWord() {
     const currentWordArray = getCurrentWordArray();
+
     if (currentWordArray.length !== 3) {
       window.alert("Word should be 3 letters!");
     }
+
     const currentWord = currentWordArray.join("");
   // adding timing to animation so that tiles bounce one after another
     const firstLetterId = guessedWordCount * 3 + 1;
     const interval = 200;
+
     currentWordArray.forEach((letter, index) => {
       setTimeout(() => {
         // Change the colour of tile that contains the correct letter
         const tileColor = getTileColor(letter, index);
-
         const letterId = firstLetterId + index;
-        const letterEl = document.getElementById(letterId)
+        const letterEl = document.getElementById(letterId);
+
         letterEl.classList.add("animate__bounce");
         letterEl.style = `background-color:${tileColor};border-color${tileColor}`
-      }, interval * index); 
+      }, interval * index) ; 
       // This multiplication above is not functioning
     });
 
@@ -102,12 +118,15 @@ function handleSubmitWord() {
     if (currentWord === word) {
       window.alert("Well done - you did it!!!")
     }
+
     if (currentWord !== word && guessedWords.length < 3) {
       window.alert("That's not it- try again!")
     }
-    if (guessedWords.length === 3) {
+
+    if (guessedWords.length === 3 && currentWord !== word) {
       window.alert(`Sorry, you have no more tries! The word is ${word}`)
     }
+
 // Here is where the words already guessed are pushed into an array so that the next word can be guessed
     guessedWords.push([]);
 }
@@ -126,10 +145,10 @@ function updateGuessedWords(letter) {
   const currentWordArray = getCurrentWordArray()
 
   if (currentWordArray && currentWordArray.length < 3) {
-  currentWordArray.push(letter)
+  currentWordArray.push(letter);
 
   const availableTilesEl = document.getElementById(String(availableTiles));
-  availableTiles = availableTiles + 1
+  availableTiles = availableTiles + 1;
 
   availableTilesEl.textContent = letter;
   }
@@ -144,42 +163,14 @@ function handleDeleteLetter() {
 
   guessedWords[guessedWords.length -1 ] = currentWordArray;
 
-  const lastLetterEl = document.getElementById(String(availableSpace - 1));
-
+  const lastLetterEl = document.getElementById(String(availableTiles - 1));
   lastLetterEl.textContent = "";
   availableTiles = availableTiles - 1;
 }
 
-/*Iterate over each keyboard key and create an on-click handler function */
-// RESEARCH!:-Is it ok that letter only has a local scope here?
-for (let i = 0; i < keys.length; i++) {
-  keys[i].onclick = ({ target }) => {
-    const letter = target.getAttribute("data-key");
+const imageContainer = document.querySelector('.clue-image-container');
+const imageElement = document.createElement('img');
+imageElement.src = getRandomWord.image;
+imageContainer.appendChild(imageElement);
 
-    if (letter === 'enter') {
-      handleSubmitWord()
-      return;
-    }
-
-    if (letter === 'del') {
-      handleDeleteLetter()
-      return
-    }
-
-    updateGuessedWords(letter);
-  };
-  
-}
-
-// // This code taken from W3 schools, adding funcitonality to go button
-// document.getELementById("submit-go").onclick = function()
-// {goClick()};
-// document.getElementById("submit-go").addEventListener("click", goClick);
-
-// function goClick() {
-//   document.getElementById("submit-go").innerHTML= "clicked";
-//   console.log(clicked);
-//   goClick();
-// }
-
-// if (go-button === 'clicked') {}
+});

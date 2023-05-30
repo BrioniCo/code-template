@@ -3,10 +3,20 @@ document.addEventListener("DOMContentLoaded", () => {
   let availableTiles = 1;
   let guessedWords = [[]];
 
-
+  
   // code for painting the letter tiles onto the DOM
   function createTiles() {
     const gameBoard = document.getElementById("letter-board")
+
+     // Call getRandomWord() to get a random word object
+  const randomWord = getRandomWord();
+
+  // Display the word and image
+  const clueImageContainer = document.querySelector(".clue-image-container");
+  const wordImage = document.createElement("img");
+  wordImage.src = randomWord.image;
+  clueImageContainer.appendChild(wordImage);
+
 
     for (let index = 0; index < 9; index++) {
       let tile = document.createElement("div");
@@ -24,6 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
      * Takes a random word with accompanyiong image from the words array
      *
      */
+    function getRandomWord() {
+      const randomIndex = Math.floor(Math.random() * words.length);
+      return words[randomIndex];
+    }
      
   // const initGame = () => {
   //   let randomWord = words[Math.floor(Math.random() * words.length)];
@@ -133,7 +147,7 @@ function handleDeleteLetter() {
   const lastLetterEl = document.getElementById(String(availableSpace - 1));
 
   lastLetterEl.textContent = "";
-  availableSpace = availableSpace - 1;
+  availableTiles = availableTiles - 1;
 }
 
 /*Iterate over each keyboard key and create an on-click handler function */

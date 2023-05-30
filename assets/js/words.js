@@ -18,106 +18,87 @@ const wordCollection = [{
     image: "assets/images/cow-icon.png",  
 },{
     word: "pig",
-    image: url(""), 
+    image: "assets/images/pork-icon.png", 
 },{
     word: "cat",
-    image: url(""), 
+    image: "assets/images/cat-animal-icon.png", 
 },{
     word: "bee",
     image: "assets/images/bee.png", 
 },{
     word: "pie",
-    image: url(""), 
+    image: "assets/images/pie.png", 
 },{
     word: "poo",
-    image: url(""), 
+    image: "assets/images/poop-icon.png" 
 },{
     word: "ear",
-    image: url(""), 
+    image: "assets/images/ear-icon.png" , 
 },{
     word: "toe",
-    image: url(""), 
+    image: "assets/images/toe.png" , 
 },{
     word: "hat",
-    image: url(""),
+    image: "assets/images/hat-icon.png" ,
 },{
     word: "you",
-    image: url(""),
+    image: "assets/images/you.png",
 },{
     word: "pen",
-    image: url(""), 
+    image: "assets/images/pencil-icon.png", 
 },{
     word: "cup",
-    image: url(""), 
+    image: "assets/images/tea-cup-icon.png", 
 },{
     word: "bat",
-    image: url("assets/images/bat-icon.png"), 
+    image: "assets/images/bat-icon.png", 
 },{
     word: "sun",
-    image: url(""), 
+    image: "assets/images/cat-animal-icon.png", 
 },{
     word: "box",
-    image: url(""), 
+    image: "assets/images/cat-animal-icon.png", 
 },{
     word: "jam",
-    image: url(""),
+    image: "assets/images/cat-animal-icon.png",
 },{
     word: "leg",
-    image: url(""),
+    image: "assets/images/cat-animal-icon.png",
 },{
     word: "toy",
-    image: url(""), 
-},{
-    word: "bus",
-    image: url(""), 
+    image: "assets/images/cat-animal-icon.png", 
 },{
     word: "egg",
-    image: url(""),
+    image: "assets/images/.png",
 },{
     word: "arm",
-    image: url(""),
+    image: "assets/images/cat-animal-icon.png",
 },{
     word: "lip",
-    image: url(""), 
+    image: "assets/images/cat-animal-icon.png", 
 },{
     word: "cow",
-    image: url(""), 
+    image: "assets/images/cow-animal-icon.png", 
 },{
     word: "fan",
-    image: url(""),
+    image: "assets/images/cat-animal-icon.png",
 },{
     word: "bed",
-    image: url(""),
+    image: "#",
 },{
     word: "key",
-    image: url(""), 
+    image: "#", 
 },{
     word: "rug",
-    image: url(""), 
+    image: "#", 
 },{
     word: "fly",
-    image: url(""),
+    image: "#",
 },{
     word: "ice",
-    image: url(""),
+    image: "#",
 }]
 
-Day
-
-Hot
-
-Job
-Kit
-Lap
-Man
-Nap
-Owl
-Pit
-Ram
-Sky
-Toy
-Van
-Wax
 
 // /**
 //  * Return random word and image from array of words 

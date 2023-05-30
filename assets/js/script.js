@@ -2,11 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
 // When game is initialised the availableTiles will always =1
   let availableTiles = 1;
   let guessedWords = [[]];
+  let word;
 
   
   // code for painting the letter tiles onto the DOM
   function createTiles() {
-    const gameBoard = document.getElementById("letter-board")
+    const gameBoard = document.getElementById("letter-board");
  
     for (let index = 0; index < 9; index++) {
       let tile = document.createElement("div");
@@ -18,22 +19,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  createTiles()
+  createTiles();
 
    // Call getRandomWord() to get a random word object
    const randomWord = getRandomWord();
-   // Display the word and image
-   const clueImageContainer = document.querySelector(".clue-image-container");
-   const wordImage = document.createElement("img");
-   wordImage.src = randomWord.image;
-   clueImageContainer.appendChild(wordImage);
+  // Display the word and image
+  //  const clueImageContainer = document.querySelector(".clue-image-container");
+  //   const wordImage = document.createElement("img");
+  //   wordImage.src = randomWord.image;
+  //   console.log(randomWord.image)
+    const imageContainer = document.querySelector('.clue-image-container');
+    const imageElement = document.createElement('img');
+   imageElement.src = randomWord.image;
+   imageContainer.appendChild(imageElement);
+
+    word = randomWord.word
+    console.log(word)
+  //  clueImageContainer.appendChild(wordImage);
  
     /**
      * Takes a random word with accompanyiong image from the words array
      *
      */
     function getRandomWord() {
-      let randomWOrd = wordCollection[];
+      // const wordList = wordCollection.word;
       const randomWordIndex = Math.floor(Math.random() * wordCollection.length);
       return wordCollection[randomWordIndex];
     }
@@ -44,7 +53,7 @@ const picture = document.querySelector(".clue-image-container");
 const keyboard = document.getElementById("keyboard-container");
 const keys = document.querySelectorAll('.keyboard-row > button');
 
-let word = "cow";
+// let word = "cow";
 let guessedWordCount = 0;
 
 /*Iterate over each keyboard key and create an on-click handler function */
@@ -167,10 +176,5 @@ function handleDeleteLetter() {
   lastLetterEl.textContent = "";
   availableTiles = availableTiles - 1;
 }
-
-const imageContainer = document.querySelector('.clue-image-container');
-const imageElement = document.createElement('img');
-imageElement.src = getRandomWord.image;
-imageContainer.appendChild(imageElement);
 
 });

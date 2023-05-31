@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+
 // When game is initialised the availableTiles will always =1
   let availableTiles = 1;
   let guessedWords = [[]];
@@ -35,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     word = randomWord.word
     console.log(word)
-  //  clueImageContainer.appendChild(wordImage);
+  
  
     /**
      * Takes a random word with accompanyiong image from the words array
@@ -53,7 +54,6 @@ const picture = document.querySelector(".clue-image-container");
 const keyboard = document.getElementById("keyboard-container");
 const keys = document.querySelectorAll('.keyboard-row > button');
 
-// let word = "cow";
 let guessedWordCount = 0;
 
 /*Iterate over each keyboard key and create an on-click handler function */
@@ -178,3 +178,12 @@ function handleDeleteLetter() {
 }
 
 });
+
+// function runGame(getCurrentWordArray) {
+
+//   currentWordArray.value = "";
+// // Each time the runGame is called, the answer box will gain the focus
+//  currentWordArray.value = "".focus();
+
+//  runGame();
+// }

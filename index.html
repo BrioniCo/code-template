@@ -20,16 +20,35 @@
     <title>Focal</title>
 </head>
 <body>
-<div id = "main-game-container" >
-    <div class = "title-container">
-    <h1 id = "rainbow-color-page-title">
+    <!-- Modal class has to be fade for Bootstrap method (rather than hidden) -->
+    <div id = "myModal" class = "modal fade">
+        <div class = "modal-dialog flex">
+            <div class = "modal-content">
+                <div class = "modal-header">
+                    <h3 class = "modal-title">Instructions</h3>
+                    <button type="button" class ="close" data-dismiss = "modal">&times;</button>
+                </div>
+                <img src ="kiss-icon.png" width = "50px" height="50px" alt = "hello image" />
+                <div class = "modal-body">
+                    <p>paragraph</p>
+                    <p>paragraph</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class ="overlay hidden"></div>
+    
+    <div id = "main-game-container" >
+     <div class = "title-container">
+        <h1 id = "rainbow-color-page-title">
         <!-- Span colour elements embedded to avoid unneccesary clutter in style sheet- W3 schools suggestion -->
         <span style="color:#C62293">F</span>
         <span style="color:#007FFE">o</span>
         <span style="color:#00BB00">c</span>
         <span style="color:orange">a</span>
         <span style="color:#FF0066">l</span>
-    </h1>
+        </h1>
     </div>
 
     <!-- This div will use JS to pick out the element and populate it with elements -->
@@ -93,6 +112,13 @@
 
     
 <script src = "assets/js/script.js"></script>  
-<script src = "assets/js/words.js"></script>    
+<script src = "assets/js/words.js"></script>  
+<!-- These links are to allow the modal to open at page load using Bootstrap.modal("show") method -->
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script> 
+<!-- // Allows modal to open at page load- taken from tutorial republic.com  -->
+<script> $(document).ready(function(){
+    $("#myModal").modal('show');
+}); </script>
 </body>
 </html>

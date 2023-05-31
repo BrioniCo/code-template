@@ -1,8 +1,8 @@
-//ONE function in this file and all the words for the game are held in the const below.
+//
 // const words are outside of the getWord function so that it is not initialised each time the function is called
 // Split out from script.js for readability */
 
-// Arrays of words: 3, 4 and 5, each with associated image 
+// Array of 3-letter words with associated image 
 
 const wordCollection = [{
     word: "bus",
@@ -54,49 +54,49 @@ const wordCollection = [{
     image: "assets/images/bat-icon.png", 
 },{
     word: "sun",
-    image: "assets/images/cat-animal-icon.png", 
+    image: "assets/images/sun-icon.png", 
 },{
     word: "box",
-    image: "assets/images/cat-animal-icon.png", 
+    image: "assets/images/box-icon.png", 
 },{
     word: "jam",
-    image: "assets/images/cat-animal-icon.png",
+    image: "assets/images/jam-jar-icon.png",
 },{
     word: "leg",
-    image: "assets/images/cat-animal-icon.png",
+    image: "assets/images/chicken-leg-icon.png",
 },{
     word: "toy",
-    image: "assets/images/cat-animal-icon.png", 
+    image: "assets/images/toy-icon.png", 
 },{
     word: "egg",
-    image: "assets/images/.png",
+    image: "assets/images/egg-color-icon.png",
 },{
     word: "arm",
-    image: "assets/images/cat-animal-icon.png",
+    image: "assets/images/arm-muscles-icon.png",
 },{
     word: "lip",
-    image: "assets/images/cat-animal-icon.png", 
+    image: "assets/images/kiss-icon.png", 
 },{
     word: "cow",
     image: "assets/images/cow-animal-icon.png", 
 },{
     word: "fan",
-    image: "assets/images/cat-animal-icon.png",
+    image: "assets/images/fan-icon.png",
 },{
     word: "bed",
-    image: "#",
+    image: "assets/images/bed-icon.png",
 },{
     word: "key",
-    image: "#", 
+    image: "assets/images/key-icon.png",
 },{
     word: "rug",
-    image: "#", 
+    image: "assets/images/rug-icon.png",
 },{
     word: "fly",
-    image: "#",
+    image:  "assets/images/fly-icon.png",
 },{
     word: "ice",
-    image: "#",
+    image:  "assets/images/ice-icon.png",
 }]
 
 

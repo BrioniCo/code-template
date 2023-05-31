@@ -56,6 +56,7 @@ const keys = document.querySelectorAll('.keyboard-row > button');
 const closeModalBtn = document.querySelector(".close-modal");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
+const newGameBtn = document.getElementById("start-new-game");
 
 let guessedWordCount = 0;
 
@@ -212,3 +213,30 @@ function handleDeleteLetter() {
 
 //  runGame();
 // }
+
+
+function startNewGame() {
+  newGameBtn.addEventListener("click", startNewGame);
+  // Reset variables
+  availableTiles = 1;
+  guessedWords = [[]];
+  guessedWordCount = 0;
+
+  // Clear DOM elements
+  const gameBoard = document.getElementById("letter-board");
+  gameBoard.innerHTML = "";
+
+  const imageContainer = document.querySelector('.clue-image-container');
+  imageContainer.innerHTML = "";
+
+  // Generate a new word
+  const randomWord = getRandomWord();
+  const imageElement = document.createElement('img');
+  imageElement.src = randomWord.image;
+  imageContainer.appendChild(imageElement);
+  word = randomWord.word;
+  console.log(word);
+
+  // Create new tiles
+  createTiles();
+}

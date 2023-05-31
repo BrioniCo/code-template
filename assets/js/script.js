@@ -53,11 +53,14 @@ document.addEventListener("DOMContentLoaded", () => {
 const picture = document.querySelector(".clue-image-container");
 const keyboard = document.getElementById("keyboard-container");
 const keys = document.querySelectorAll('.keyboard-row > button');
+const closeModalBtn = document.querySelector(".close-modal");
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
 
 let guessedWordCount = 0;
 
 /*Iterate over each keyboard key and create an on-click handler function */
-// RESEARCH!:-Is it ok that letter only has a local scope here?
+//
 for (let i = 0; i < keys.length; i++) {
   keys[i].onclick = ({ target }) => {
     const letter = target.getAttribute("data-key");
@@ -75,7 +78,29 @@ for (let i = 0; i < keys.length; i++) {
     updateGuessedWords(letter);
   };
   
-}
+} 
+
+/**
+     * Closes the modal, code taken from 
+     * [https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/]
+     *
+     */
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+// close the modal when the close button and overlay is clicked
+closeModalBtn.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+// close modal when the Esc key is pressed
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
+});
+
    /**
      * checks which letter tiles contain the right letter 
      * in the right place and allow it to change color accordingly
@@ -105,7 +130,7 @@ function handleSubmitWord() {
     }
 
     const currentWord = currentWordArray.join("");
-  // adding timing to animation so that tiles bounce one after another
+  // adding timing to animation so that tiles bounce one after another -NOT WORKING PROPERLY
     const firstLetterId = guessedWordCount * 3 + 1;
     const interval = 200;
 

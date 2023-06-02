@@ -74,9 +74,8 @@ body {
   /* display: inline-block; */
   font-weight: 700;
   color: rgb(240,255,240);
-  /* border-radius: 3px; */
-  /* text-align: center; */
   font-size: 1em;
+  outline: none;
 
   transform: translate(180px, -80px);
   padding: 0.5rem 0.9rem;
@@ -128,7 +127,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  /* overflow: hidden; */
+  max-height: 400px;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 #letter-board {
@@ -139,10 +140,10 @@ body {
 }
 
 .tile {
-  border: 2px solid #C62293;
-  min-width: 80px;
-  min-height: 80px;
-  font-size: 50px;
+  border: 5px solid #C62293;
+  min-width: 70px;
+  min-height: 70px;
+  font-size: 45px;
   font-weight: bold;
 
   display: flex;
@@ -156,6 +157,7 @@ body {
   width: 70%;
   margin-top: 20px;
 }
+
 .keyboard-row {
   display: flex;
   justify-content: center;
@@ -183,6 +185,11 @@ body {
   user-select: none;
 }
 
+.keyboard-row > button:active, .keyboard-row > button:hover {
+  background: RGB (246, 228, 209);
+  color:#C62293;
+}
+
 .keyboard-row button.wide-button {
     flex-grow: 1.7;
 }
@@ -192,12 +199,12 @@ body {
 }
      
 .clue-image-container {
-  max-width: 125px; 
-  min-height: 125px;
+  max-width: 100px; 
+  min-height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 15px;
   border-radius: 60px;
 }
   
@@ -206,11 +213,30 @@ body {
   height: auto;
 }  
 
-.nav-buttons {
-  height: 60px;
+.btn {
   width: 60px;
-  font-weight: 400;
-  border: none;
-  border-radius: 50px;
+  height: 60px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color:#C62293;
 }
 
+.btn:focus {
+  outline: none;
+}
+
+.big-btn {
+  padding-top: 10px;
+  border-radius: 50%;
+  background-color: white;
+  border: 5px solid;
+  width: 70px;
+  height: 70px;
+  font-size: 2rem;
+  margin: 0 30px;
+  transition: all 0.5s;
+}
+.big-btn:active, .big-btn:hover {
+  background-color: #007FFE;
+  color: white;
+}

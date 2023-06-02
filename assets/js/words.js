@@ -15,7 +15,7 @@ const wordCollection = [{
     image: "assets/images/car-icon.png", 
 },{
     word: "cow",
-    image: "assets/images/cow-icon.png",  
+    image: "assets/images/cow-animal-icon.png",  
 },{
     word: "pig",
     image: "assets/images/pork-icon.png", 
@@ -77,9 +77,6 @@ const wordCollection = [{
     word: "lip",
     image: "assets/images/kiss-icon.png", 
 },{
-    word: "cow",
-    image: "assets/images/cow-animal-icon.png", 
-},{
     word: "fan",
     image: "assets/images/fan-icon.png",
 },{
@@ -97,6 +94,39 @@ const wordCollection = [{
 },{
     word: "ice",
     image:  "assets/images/ice-icon.png",
+},{
+    word: "gem",
+    image: "assets/images/gem.png",
+},{
+    word: "jaw",
+    image: "assets/images/jaw-icon.png",
+},{
+    word: "art",
+    image: "assets/images/art-icon.png",
+},{
+    word: "zip",
+    image: "assets/images/zipper-icon.png",
+},{
+    word: "ham",
+    image: "assets/images/ham-icon.png",
+},{
+    word: "owl",
+    image: "assets/images/owl-icon.png",
+},{
+    word: "run",
+    image: "assets/images/run-icon.png",
+},{
+    word: "bug",
+    image: "assets/images/bug-icon.png",
+},{
+    word: "cog",
+    image: "assets/images/cog-icon.png",
+},{
+    word: "cut",
+    image: "assets/images/cut-icon.png",
+},{
+    word: "fun",
+    image: "assets/images/fun-icon.png",
 }]
 
 

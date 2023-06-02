@@ -51,7 +51,7 @@ body {
 
 .modal p {
   font-size: 0.9rem;
-  color: 240,255,240;
+  color: rgb(240,255,240);
   margin: 0.4rem 0 0.2rem;
   font-size: 70%;
 }
@@ -73,7 +73,7 @@ body {
 .close-modal {
   /* display: inline-block; */
   font-weight: 700;
-  color: 240,255,240;
+  color: rgb(240,255,240);
   /* border-radius: 3px; */
   /* text-align: center; */
   font-size: 1em;
@@ -206,4 +206,11 @@ body {
   height: auto;
 }  
 
+.nav-buttons {
+  height: 60px;
+  width: 60px;
+  font-weight: 400;
+  border: none;
+  border-radius: 50px;
+}
 

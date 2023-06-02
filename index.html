@@ -45,6 +45,11 @@
         </div>
     </div>
     <div class ="overlay"></div>
+
+    <div class = "score-area">
+        <p class="scores">Correct Answers:<span>0</span></p>
+        <p class = "scores">Incorrect Answers:<span></span></p>
+    </div>
     
     <div id = "main-game-container" >
      <div class = "title-container">
@@ -112,8 +117,11 @@
         
     </div>
    
-
-    <button id= "start-new-game">NEW WORD</div>
+    <span class ="nav-buttons"> <button id= "start-new-game"><i class="fa-solid fa-arrows-rotate"></i></button></span>
+   <span class = "nav-buttons"><button id= "go-home"><i class="fa-solid fa-house"></i></button></span>
+       
+    </div>
+    </div>
 
 </div>
 
@@ -129,12 +137,6 @@ integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfoo
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 </script>
-<!-- // Allows modal to open at page load- taken from tutorial republic.com  -->
-<!-- <script>
-    $(document).ready(function(){
-        $("#myModal").modal('show');
-    });
-</script> -->
 <script type="text/javascript">
     $(window).on('load', function() {
         $('#myModal').modal('show');

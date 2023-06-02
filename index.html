@@ -29,12 +29,14 @@
                     <h3 class = "modal-title">How to Play</h3>
                     <button type="button" class ="close-modal" data-dismiss = "modal">&times;</button>
                 </div>
-                <img src = "assets/images/kiss-icon.png" width = "50px" height="50px" alt = "hello image" />
+                <div id = "beehive-image" class = "center-align">
+                <img src = "assets/images/beehive-icon.png" width = "50px" height="50px" alt = "hello image" />
+                </div>
                 <div class = "modal-body">
                     <p>Get 3 chances to spell a 3-letter word!</p>
                     <p>A <span style="color:#00BB00">GREEN</span> box means you have the right letter in the right place</p>
-                    <p>A <span style="color:#007FFE">BLUE</span> box means that letter is in the word, but you have it in the wrong place!</p>
-                    <p>Have fun learning!</p>
+                    <p>An <span style="color:orange">ORANGE</span> box means that letter is in the word, but you have it in the wrong place!</p>
+                    <p class = "center-align">Have fun learning!</p>
                 </div>
             </div>
 
@@ -98,7 +100,7 @@
             <button data-key="x">x</button>
             <button data-key="y">y</button>
             <button data-key="z">z</button>
-            <button data-key="enter" class="wide-button">enter</button>
+            <button data-key="enter" class="wide-button" id="enter-button">enter</button>
                   
         </div>
         <!-- <div class = "navigation-buttons">
@@ -117,8 +119,14 @@
 <script src = "assets/js/script.js"></script>  
 <script src = "assets/js/words.js"></script>  
 <!-- These links are to allow the modal to open at page load using Bootstrap.modal("show") method -->
-<script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script> 
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+</script>
 <!-- // Allows modal to open at page load- taken from tutorial republic.com  -->
 <!-- <script>
     $(document).ready(function(){

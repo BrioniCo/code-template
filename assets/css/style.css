@@ -1,198 +1,209 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
-    font-family: "Lexend", sans-serif;
+  height: 100%;
+  font-family: "Lexend", sans-serif;
 }
 
 body {
-    /* background: #182c25; */
-    background: RGB (246, 228, 209);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    min-height: 100vh;
+  /* background: #182c25; */
+  background: RGB (246, 228, 209);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 100vh;
 }
 
 #rainbow-color-page-title {
-    font-size: 300%;
+  font-size: 300%;
 }
 
 .modal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.4rem;
-    width: 450px;
-    padding: 1.3rem;
-    min-height: 550px;
-    position: absolute;
-    top: 15%;
-    background-color: #182c25;
-    border: 1px solid #FF0066;
-    border-radius: 5px;
-    z-index : 2;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
 
-
-.modal .flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .modal p {
-    font-size: 0.9rem;
-    color: #FEF601;
-    margin: 0.4rem 0 0.2rem;
-  }
-
-  .modal > button {
-    cursor: pointer;
-    border: none;
-    font-weight: 600;
-  }
-
-  .close-modal {
-    display: inline-block;
-    font-weight: 700;
-    color: #FF0066 ;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 1em;
-
-    transform: translate(350px, -150px);
-    padding: 0.5rem 0.7rem;
-    background: #182c25;
-    border-radius: 50%;
-  }
-
-  .modal-header {
-    border: 2px solid red;
-  }
-
-  .modal-title {
-    color: #FEF601;
-  }
-
-.overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(3px);
-    z-index: 1;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-#main-game-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center; 
-    height: 90%;
+  width: 450px;
+  padding: 1.3rem;
+  min-height: 550px;
+  position: absolute;
+  top: 15%;
+  background-color:rgb(106, 90, 205);
+  
+  border-radius: 5px;
+  z-index : 2;
+  font-size: 200%;
 }
 
+.modal .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.modal p {
+  font-size: 0.9rem;
+  color: 240,255,240;
+  margin: 0.4rem 0 0.2rem;
+  font-size: 70%;
+}
+
+#beehive-image {
+  min-height: 100px;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.modal > button {
+  cursor: pointer;
+  border: none;
+  font-weight: 550;
+}
+
+.close-modal {
+  /* display: inline-block; */
+  font-weight: 700;
+  color: 240,255,240;
+  /* border-radius: 3px; */
+  /* text-align: center; */
+  font-size: 1em;
+
+  transform: translate(180px, -80px);
+  padding: 0.5rem 0.9rem;
+  background: rgb(106, 90, 205);
+  border-radius: 50%;
+}
+
+.modal-header {
+  text-align: center;
+}
+
+.modal-title {
+  color: 240,255,240;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+#main-game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; 
+  height: 90%;
+}
 
 .title-container {
-    text-align: center;
-    width: 100%;
-    border-bottom: 1px solid orange;
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid orange;
 }
 
 #letter-board-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  /* overflow: hidden; */
 }
 
 #letter-board {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-   
-    box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  box-sizing: border-box;
 }
 
 .tile {
-    border: 2px solid #C62293;
-    min-width: 80px;
-    min-height: 80px;
-    font-size: 50px;
-    font-weight: bold;
-    color: orange;
+  border: 2px solid #C62293;
+  min-width: 80px;
+  min-height: 80px;
+  font-size: 50px;
+  font-weight: bold;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
     
 #keyboard-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 70%;
-    margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin-top: 20px;
 }
 .keyboard-row {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto 8px;
-    touch-action: manipulation;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto 8px;
+  touch-action: manipulation;
 }
 
 .keyboard-row button {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    border: 1px solid #ccc;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ccc;
 
-    border-radius: 2px;
-    font-size: 30px;
-    text-align: center;
-    line-height: 40px;
-    flex-grow: 1;
+  border-radius: 2px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 40px;
+  flex-grow: 1;
 
-    cursor: pointer;
-    background: #FEF601;
-    font-family: inherit;
-    font-weight: bold;
-    user-select: none;
+  cursor: pointer;
+  background: #FEF601;
+  font-family: inherit;
+  font-weight: bold;
+  user-select: none;
 }
 
 .keyboard-row button.wide-button {
-    flex-grow: 1.5;
+    flex-grow: 1.7;
+}
+
+#enter-button {
+  font-size: 20px;
 }
      
 .clue-image-container {
-    width: 125px; 
-    height: 125px;
-    /* border: 2px solid #C62293;  */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    border-radius: 60px;
-  }
+  max-width: 125px; 
+  min-height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 60px;
+}
   
-  .clue-image-container img {
-    max-width: 100%; 
-    max-height: 100%;
-  }  
+.clue-image-container img {
+  max-width: 60%;
+  height: auto;
+}  
 
 

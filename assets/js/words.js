@@ -105,8 +105,7 @@ const wordCollection = [{
 //  * @param {string} wordCategory Verb or Adjective
 //  */ keeping this here for reference- from a code inst project Fiona word monster
 // function getWord(wordCategory) {
-//     // filter the words array into a new array, by the chosen category
-//     let words = words.filter(word => word.type === );
+//     // filter the words array into a new array,
 //     //get a random word object from the words array, pass this to startGame function 
 //     let wordObject = words[Math.floor(Math.random() * words.length)];
 //     return wordObject;

@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-
 // When game is initialised the availableTiles will always =1
+
   let availableTiles = 1;
   let guessedWords = [[]];
   let word;
 
-  
   // code for painting the letter tiles onto the DOM
   function createTiles() {
     const gameBoard = document.getElementById("letter-board");
@@ -23,21 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
   createTiles();
 
    // Call getRandomWord() to get a random word object
-   const randomWord = getRandomWord();
-  // Display the word and image
-  //  const clueImageContainer = document.querySelector(".clue-image-container");
-  //   const wordImage = document.createElement("img");
-  //   wordImage.src = randomWord.image;
-  //   console.log(randomWord.image)
+    const randomWord = getRandomWord();
     const imageContainer = document.querySelector('.clue-image-container');
     const imageElement = document.createElement('img');
-   imageElement.src = randomWord.image;
-   imageContainer.appendChild(imageElement);
+    imageElement.src = randomWord.image;
+    imageContainer.appendChild(imageElement);
 
     word = randomWord.word
-    console.log(word)
-  
- 
+    // console.log(word)
+
     /**
      * Takes a random word with accompanyiong image from the words array
      *
@@ -50,36 +43,15 @@ document.addEventListener("DOMContentLoaded", () => {
      
 // Pulling elements from the DOM to manipulate. image and lettertiles will correspond to each other.
 
-const picture = document.querySelector(".clue-image-container");
-const keyboard = document.getElementById("keyboard-container");
-const keys = document.querySelectorAll('.keyboard-row > button');
+// const picture = document.querySelector(".clue-image-container");
+// const keyboard = document.getElementById("keyboard-container");
+// const keys = document.querySelectorAll('.keyboard-row > button');
 const closeModalBtn = document.querySelector(".close-modal");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const newGameBtn = document.getElementById("start-new-game");
-
 let guessedWordCount = 0;
 
-/*Iterate over each keyboard key and create an on-click handler function */
-//
-for (let i = 0; i < keys.length; i++) {
-  keys[i].onclick = ({ target }) => {
-    const letter = target.getAttribute("data-key");
-
-    if (letter === 'enter') {
-      handleSubmitWord()
-      return;
-    }
-
-    if (letter === 'del') {
-      handleDeleteLetter()
-      return
-    }
-
-    updateGuessedWords(letter);
-  };
-  
-} 
 
 /**
      * Closes the modal, code taken from 
@@ -111,27 +83,29 @@ function getTileColor(letter, index) {
   const isCorrectLetter = word.includes(letter)
 
   if (!isCorrectLetter) {
-    return "#182c25";
+    return "#CD5C5C";
   }
 
   const letterInCorrectPosition = word.charAt(index)
   const isCorrectPosition = letter === letterInCorrectPosition
 
-  if (isCorrectPosition) {
+  if (isCorrectPosition && isCorrectLetter) {
     return "#00BB00";
   }
-  return "#007FFE"
+  if (isCorrectLetter && !isCorrectPosition)
+  return "orange"
 }
 
 function handleSubmitWord() {
     const currentWordArray = getCurrentWordArray();
 
     if (currentWordArray.length !== 3) {
-      window.alert("Word should be 3 letters!");
+      window.alert("Word should be 3 letters!")
+    return ;
     }
 
     const currentWord = currentWordArray.join("");
-  // adding timing to animation so that tiles bounce one after another -NOT WORKING PROPERLY
+  // adding timing to animation so that tiles bounce one after another 
     const firstLetterId = guessedWordCount * 3 + 1;
     const interval = 200;
 
@@ -143,7 +117,7 @@ function handleSubmitWord() {
         const letterEl = document.getElementById(letterId);
 
         letterEl.classList.add("animate__bounce");
-        letterEl.style = `background-color:${tileColor};border-color${tileColor}`
+        letterEl.style = `background-color:${tileColor};border-color:${tileColor}`
       }, interval * index) ; 
       // This multiplication above is not functioning
     });
@@ -169,7 +143,7 @@ function handleSubmitWord() {
 // create an array of words 
 function getCurrentWordArray() {
   const numberOfGuessedWords = guessedWords.length;
-  return guessedWords[numberOfGuessedWords -1]
+  return guessedWords[numberOfGuessedWords -1];
 }
 
    /**
@@ -177,7 +151,7 @@ function getCurrentWordArray() {
      *
      */
 function updateGuessedWords(letter) {
-  const currentWordArray = getCurrentWordArray()
+  const currentWordArray = getCurrentWordArray();
 
   if (currentWordArray && currentWordArray.length < 3) {
   currentWordArray.push(letter);
@@ -192,31 +166,42 @@ function updateGuessedWords(letter) {
      * Handles deleted letters and updates array accordingly- ie takes current word
      * array and reassigns it without the deleted letter
      */
+
 function handleDeleteLetter() {
   const currentWordArray = getCurrentWordArray();
   const removedLetter = currentWordArray.pop();
 
-  guessedWords[guessedWords.length -1 ] = currentWordArray;
+  guessedWords[guessedWords.length - 1] = currentWordArray;
 
   const lastLetterEl = document.getElementById(String(availableTiles - 1));
   lastLetterEl.textContent = "";
   availableTiles = availableTiles - 1;
 }
 
-});
+const keys = document.querySelectorAll('.keyboard-row > button');
 
-// function runGame(getCurrentWordArray) {
+/*Iterate over each keyboard key and create an on-click handler function */
+//
+for (let i = 0; i < keys.length; i++) {
+  keys[i].onclick = ({ target }) => {
+    const letter = target.getAttribute("data-key");
 
-//   currentWordArray.value = "";
-// // Each time the runGame is called, the answer box will gain the focus
-//  currentWordArray.value = "".focus();
+    if (letter === 'enter') {
+      handleSubmitWord()
+      return;
+    }
 
-//  runGame();
-// }
+    if (letter === 'del') {
+      handleDeleteLetter()
+      return
+    }
 
+    updateGuessedWords(letter);
+  };
+  
+} 
 
-function startNewGame() {
-  newGameBtn.addEventListener("click", startNewGame);
+ function startNewGame() {
   // Reset variables
   availableTiles = 1;
   guessedWords = [[]];
@@ -235,8 +220,11 @@ function startNewGame() {
   imageElement.src = randomWord.image;
   imageContainer.appendChild(imageElement);
   word = randomWord.word;
-  console.log(word);
+  // console.log(word);
 
   // Create new tiles
   createTiles();
 }
+
+newGameBtn.addEventListener("click", startNewGame); 
+});

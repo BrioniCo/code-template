@@ -240,3 +240,9 @@ body {
   background-color: #007FFE;
   color: white;
 }
+
+/* Code to remove pointer event on delete font awesome icon so that click event works */
+
+#pointer-event {
+  pointer-events: none;
+}

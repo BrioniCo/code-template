@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // console.log(word)
 
     /**
-     * Takes a random word with accompanyiong image from the words array
+     * Takes a random word with accompanying image from the words array
      *
      */
     function getRandomWord() {
@@ -81,6 +81,7 @@ document.addEventListener("keydown", function (e) {
      */
 function getTileColor(letter, index) {
   const isCorrectLetter = word.includes(letter)
+
 
   if (!isCorrectLetter) {
     return "#CD5C5C";
@@ -146,10 +147,21 @@ function getCurrentWordArray() {
   return guessedWords[numberOfGuessedWords -1];
 }
 
-   /**
-     * Keeps track of how many words have been guessed so far and how many tiles are still available. 
-     *
-     */
+function incrementScore()   {
+
+}
+
+function incrementWrongAnswer() {
+
+}
+
+function endGame() {
+  
+}
+/**
+* Keeps track of how many words have been guessed so far and how many tiles are still available. 
+*
+*/
 function updateGuessedWords(letter) {
   const currentWordArray = getCurrentWordArray();
 
@@ -174,8 +186,23 @@ function handleDeleteLetter() {
   guessedWords[guessedWords.length - 1] = currentWordArray;
 
   const lastLetterEl = document.getElementById(String(availableTiles - 1));
+ // I need something that prevents an empty field being checked but don't know where to handle it. 
+ if (lastLetterEl.textContent) {
   lastLetterEl.textContent = "";
+}
+  
+  // lastLetterEl.textContent = "";
   availableTiles = availableTiles - 1;
+  // Code below is meant to prevent already checked fields from being deleted but is not functioning
+  lastLetterEl.classList.add('checked');
+  let alreadyChecked = lastLetterEl.classList.contains('checked');
+
+  console.log(lastLetterEl);
+
+  if (lastLetterEl.textContent && !alreadyChecked ) {
+    lastLetterEl.textContent = "";
+  }
+
 }
 
 const keys = document.querySelectorAll('.keyboard-row > button');
@@ -192,6 +219,7 @@ for (let i = 0; i < keys.length; i++) {
     }
 
     if (letter === 'del') {
+      // console.log('Found del')
       handleDeleteLetter()
       return
     }

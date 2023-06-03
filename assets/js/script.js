@@ -127,6 +127,8 @@ function handleSubmitWord() {
 
     if (currentWord === word) {
       window.alert("Well done - you did it!!!")
+      incrementScore();
+      startNewGame();
     }
 
     if (currentWord !== word && guessedWords.length < 3) {
@@ -135,6 +137,7 @@ function handleSubmitWord() {
 
     if (guessedWords.length === 3 && currentWord !== word) {
       window.alert(`Sorry, you have no more tries! The word is ${word}`)
+      incrementWrongAnswer();
     }
 
 // Here is where the words already guessed are pushed into an array so that the next word can be guessed
@@ -147,16 +150,24 @@ function getCurrentWordArray() {
   return guessedWords[numberOfGuessedWords -1];
 }
 
+/**
+ * takes correctly spelled words from the DOM and increments by 1 
+ */
 function incrementScore()   {
+  let oldScore = parseInt(document.getElementById("score").innerText);
+  document.getElementById("score").innerText = ++oldScore;
 
 }
-
+/**
+ * takes a tally of incorrectly spelled words from the DOM and increments by 1 
+ */
 function incrementWrongAnswer() {
-
+  let oldScore = parseInt(document.getElementById("incorrect").innerText);
+  document.getElementById("incorrect").innerText = ++oldScore;
 }
 
 function endGame() {
-  
+
 }
 /**
 * Keeps track of how many words have been guessed so far and how many tiles are still available. 
@@ -178,7 +189,6 @@ function updateGuessedWords(letter) {
      * Handles deleted letters and updates array accordingly- ie takes current word
      * array and reassigns it without the deleted letter
      */
-
 function handleDeleteLetter() {
   const currentWordArray = getCurrentWordArray();
   const removedLetter = currentWordArray.pop();

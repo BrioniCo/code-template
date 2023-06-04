@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let word;
 
    /**
-     * code for painting the letter tiles onto the DOM
-     *
-     */
+    * code for painting the letter tiles onto the DOM
+    *
+    */
   function createTiles() {
     const gameBoard = document.getElementById("letter-board");
  
@@ -34,14 +34,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     word = randomWord.word
 
-    /**
-     * Takes a random word with accompanying image from the words array
-     *
-     */
-    function getRandomWord() {
-      const randomWordIndex = Math.floor(Math.random() * wordCollection.length);
-      return wordCollection[randomWordIndex];
-    }
+  /**
+  * Takes a random word with accompanying image from the words array
+  *
+  */
+  function getRandomWord() {
+    const randomWordIndex = Math.floor(Math.random() * wordCollection.length);
+    return wordCollection[randomWordIndex];
+  }
 
 // const picture = document.querySelector(".clue-image-container");
 // const keyboard = document.getElementById("keyboard-container");
@@ -54,10 +54,10 @@ let guessedWordCount = 0;
 
 
 /**
-     * Closes the modal, code taken from 
-     * [https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/]
-     *
-     */
+* Closes the modal, code taken from 
+* [https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/]
+*
+*/
 const closeModal = function () {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
@@ -106,16 +106,16 @@ function handleSubmitWord() {
     }
 
     const currentWord = currentWordArray.join("");
-  // adding timing to animation so that tiles bounce one after another 
+  // adding timing to animation so that tiles bounce
     const firstLetterId = guessedWordCount * 3 + 1;
     const interval = 200;
 
     currentWordArray.forEach((letter, index) => {
       setTimeout(() => {
-        // Change the colour of tile that contains the correct letter
-        const tileColor = getTileColor(letter, index);
-        const letterId = firstLetterId + index;
-        const letterEl = document.getElementById(letterId);
+      // Change the colour of tile that contains the correct letter
+      const tileColor = getTileColor(letter, index);
+      const letterId = firstLetterId + index;
+      const letterEl = document.getElementById(letterId);
 
         letterEl.classList.add("animate__bounce");
         letterEl.style = `background-color:${tileColor};border-color:${tileColor}`
@@ -142,8 +142,9 @@ function handleSubmitWord() {
 // Here is where the words already guessed are pushed into an array so that the next word can be guessed
     guessedWords.push([]);
 }
-
-// create an array of words 
+/**
+ * Create an array of words 
+ */
 function getCurrentWordArray() {
   const numberOfGuessedWords = guessedWords.length;
   return guessedWords[numberOfGuessedWords -1];
@@ -166,6 +167,7 @@ function incrementWrongAnswer() {
 }
 
 function gameOver() {
+  
 
 }
 /**
@@ -184,48 +186,31 @@ function updateGuessedWords(letter) {
   availableTilesEl.textContent = letter;
   }
 }
-   /**
-     * Handles deleted letters and updates array accordingly- ie takes current word
-     * array and reassigns it without the deleted letter
-     */
+  /**
+  * Handles deleted letters and updates array accordingly- ie takes current word
+  * array and reassigns it without the deleted letter. 
+  */
 function handleDeleteLetter() {
   const currentWordArray = getCurrentWordArray();
-  const removedLetter = currentWordArray.pop();
 
-  let row;
-  if (index <= 3) {
-    row = 1;
+// Conditional statement below ensure that letters from already checked rows cannot be deleted, ie indexes 2 and 5
+  if (currentWordArray.length > 0) {
+    const lastLetterIndex = currentWordArray.length -1;
+
+    if (lastLetterIndex !== 2 || lastLetterIndex !== 5) {
+      const removedLetter = currentWordArray.pop();
+      guessedWords[guessedWords.length - 1] = currentWordArray;
+
+      const lastLetterEl = document.getElementById(String(availableTiles - 1));
+
+      lastLetterEl.textContent = "";
+
+      availableTiles = availableTiles - 1;
+    } else {
+      console.log('action not allowed; cannot delete indexes 2 and 5!');
+    }
+
   }
-  else if (index > 3 && index <= 6) {
-    row = 2; 
-  }
- else (index > 6 && index <= 9) {
-  row = 3;
- }
-  
-
-
-  // From here on down is original code 
-  guessedWords[guessedWords.length - 1] = currentWordArray;
-
-  const lastLetterEl = document.getElementById(String(availableTiles - 1));
- // I need something that prevents an empty field being checked but don't know where to handle it. 
- if (lastLetterEl.textContent) {
-  lastLetterEl.textContent = "";
-}
-  
-  // lastLetterEl.textContent = "";
-  availableTiles = availableTiles - 1;
-  // Code below is meant to prevent already checked fields from being deleted but is not functioning
-  lastLetterEl.classList.add('checked');
-  let alreadyChecked = lastLetterEl.classList.contains('checked');
-
-  console.log(lastLetterEl);
-
-  if (lastLetterEl.textContent && !alreadyChecked ) {
-    lastLetterEl.textContent = "";
-  }
-
 }
 
 const keys = document.querySelectorAll('.keyboard-row > button');
@@ -242,7 +227,6 @@ for (let i = 0; i < keys.length; i++) {
     }
 
     if (letter === 'del') {
-      // console.log('Found del')
       handleDeleteLetter()
       return
     }
@@ -252,27 +236,27 @@ for (let i = 0; i < keys.length; i++) {
   
 } 
 
+/*Function that resets the word to spell without effecting increment score */
+//
  function startNewGame() {
-  // Reset variables
+  // Reseting variables here 
   availableTiles = 1;
   guessedWords = [[]];
   guessedWordCount = 0;
 
-  // Clear DOM elements
+  // Clearing DOM elements here
   const gameBoard = document.getElementById("letter-board");
   gameBoard.innerHTML = "";
 
   const imageContainer = document.querySelector('.clue-image-container');
   imageContainer.innerHTML = "";
 
-  // Generate a new word
   const randomWord = getRandomWord();
   const imageElement = document.createElement('img');
   imageElement.src = randomWord.image;
   imageContainer.appendChild(imageElement);
   word = randomWord.word;
 
-  // Create new tiles
   createTiles();
 }
 

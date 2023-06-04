@@ -5,7 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
   let guessedWords = [[]];
   let word;
 
-  // code for painting the letter tiles onto the DOM
+   /**
+     * code for painting the letter tiles onto the DOM
+     *
+     */
   function createTiles() {
     const gameBoard = document.getElementById("letter-board");
  
@@ -16,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tile.classList.add("animate__animated");
       tile.setAttribute("id", index +1);
       gameBoard.appendChild(tile);
+      // Trying some new code from here on to see if i can group the tiles into individual row divs to ensure that previous rows cannot be deleted
     }
   }
 
@@ -29,19 +33,15 @@ document.addEventListener("DOMContentLoaded", () => {
     imageContainer.appendChild(imageElement);
 
     word = randomWord.word
-    // console.log(word)
 
     /**
      * Takes a random word with accompanying image from the words array
      *
      */
     function getRandomWord() {
-      // const wordList = wordCollection.word;
       const randomWordIndex = Math.floor(Math.random() * wordCollection.length);
       return wordCollection[randomWordIndex];
     }
-     
-// Pulling elements from the DOM to manipulate. image and lettertiles will correspond to each other.
 
 // const picture = document.querySelector(".clue-image-container");
 // const keyboard = document.getElementById("keyboard-container");
@@ -74,11 +74,11 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-   /**
-     * checks which letter tiles contain the right letter 
-     * in the right place and allow it to change color accordingly
-     *
-     */
+/**
+* checks which letter tiles contain the right letter 
+* in the right place and allow it to change color accordingly
+*
+*/
 function getTileColor(letter, index) {
   const isCorrectLetter = word.includes(letter)
 
@@ -120,7 +120,7 @@ function handleSubmitWord() {
         letterEl.classList.add("animate__bounce");
         letterEl.style = `background-color:${tileColor};border-color:${tileColor}`
       }, interval * index) ; 
-      // This multiplication above is not functioning
+
     });
 
     guessedWordCount += 1 ;
@@ -128,7 +128,6 @@ function handleSubmitWord() {
     if (currentWord === word) {
       window.alert("Well done - you did it!!!")
       incrementScore();
-      startNewGame();
     }
 
     if (currentWord !== word && guessedWords.length < 3) {
@@ -166,7 +165,7 @@ function incrementWrongAnswer() {
   document.getElementById("incorrect").innerText = ++oldScore;
 }
 
-function endGame() {
+function gameOver() {
 
 }
 /**
@@ -193,6 +192,20 @@ function handleDeleteLetter() {
   const currentWordArray = getCurrentWordArray();
   const removedLetter = currentWordArray.pop();
 
+  let row;
+  if (index <= 3) {
+    row = 1;
+  }
+  else if (index > 3 && index <= 6) {
+    row = 2; 
+  }
+ else (index > 6 && index <= 9) {
+  row = 3;
+ }
+  
+
+
+  // From here on down is original code 
   guessedWords[guessedWords.length - 1] = currentWordArray;
 
   const lastLetterEl = document.getElementById(String(availableTiles - 1));
@@ -258,7 +271,6 @@ for (let i = 0; i < keys.length; i++) {
   imageElement.src = randomWord.image;
   imageContainer.appendChild(imageElement);
   word = randomWord.word;
-  // console.log(word);
 
   // Create new tiles
   createTiles();

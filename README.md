@@ -1,108 +1,556 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Focal Spelling Game**
 
-Welcome Brioni Connolly,
+Spelling Bee Scramble is a fun interactive game based loosely on the popular NYTimes 'Wordle' aimed at children aged approximately 4-6 who would like to practice and improve their spelling and guessing abilities.  Players must use the clue image to guess what 3-letter word needs to be spelled and then have three chances to spell it.   
+<br>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Spelling Bee Scramble game represented on different devices](docs/devices/spelling-bee-am-i-responsive.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+<br>
 
-## Gitpod Reminders
+[View the Focal site on GitHub Pages](https://brioniCo.github.io/focalpp2/)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+<br>
 
-`python3 -m http.server`
+## **CONTENTS**
 
-A blue button should appear to click: _Make Public_,
+* [User Experience (UX)](#user-experience-ux)
+    * [Strategy](#strategy)
+        * [Project Goals](#project-goals)
+        * [User Stories](#user-stories)
+    * [Design](#design)
+        * [Wireframes](#wireframes)
+        * [Features](#features)
+        * [Colour Palette](#colour-palette)
+        * [Typography](#typography)
+        * [Imagery](#imagery)
+* [Technologies Used](#technologies-used)
+    * [Languages Used](#languages-used)
+    * [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
+* [Deployment and Local Development](#deployment-and-local-development)
+    * [How to Fork](#how-to-fork)
+    * [How to Clone](#how-to-clone)
+* [Testing](#testing)
+    * [Automated Testing](#automated-testing)
+        * [W3C Validator](#w3c-validator)
+        * [JSHint](#JSHint)
+        * [Lighthouse](#lighthouse)
+    * [Manual Testing](#manual-testing)
+        * [Testing User Stories](#testing-user-stories)
+        * [Full Testing](#full-testing)
+* [Bugs](#bugs)
+    * [Known Bugs](#known-bugs)
+    * [Solved Bugs](#solved-bugs)
+* [Credits](#credits)
+    * [Code Used](#code-used)
+    * [Content](#content)
+    * [Media](#media)
+    * [Acknowledgements](#acknowledgements)
 
-Another blue button should appear to click: _Open Browser_.
+# **User Experience (UX)**
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## **STRATEGY**
+___
 
-A blue button should appear to click: _Make Public_,
+## **Project Goals**
 
-Another blue button should appear to click: _Open Browser_.
+<br>
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+To help young children, aged circa 3-6 years old with their spelling by providing a simple and engaging game.  The game was designed with my own early school age child's needs in mind. He is currently learning to sound out and spell small words and so I wanted to create something that he could use to make his learning more fun and interactive.
+ 
+Similar to the NYTimes's popular Wordle game, Focal guides the user towards the solution by displaying a green colour block on the game grid if the user has placed the correct letter in the correct place, an orange block if a correct letter has been chosen but put in the wrong place, and a red block if the letter does not feature in the word. 
 
-To log into the Heroku toolbelt CLI:
+<br>
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## **User Stories**
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+<br>
 
-------
+### Visitor Goals:
 
-## Release History
+<br>
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+* * As a visitor, I want a fun and engaging educational experience that helps with my spelling.
+* As a visitor, I want to be engaged and encouraged to hit certain spelling targets to keep the experience interesting and challenging.
+* As a visitor, I need the game to be responsive over a range of device sizes.
+* As a visitor, I want to be able to keep track of my incorrect and correct guesses. 
+* As a visitor, I want clear and concise feedback each time I submit a correct or incorrect answer.
+*  As a visitor, I want easy intuitive access to an explanation of how to play the game.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+[* As a first time visitor, I am looking for a fun and interactive way to practice and improve my spelling.
+* As a first time visitor, I want clear feedback about how close I am to reaching my target number of correct answers.
+* As a first time visitor, I want clear feedback to let me know I have completed the challenge and how to proceed.]
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+<br>
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## **DESIGN**
+___
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## **Wireframes**
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+<br>
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+I used a mobile first approach when planning for this project...
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+<br>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![Mobile wireframe for...](docs/wireframes/#.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+<br>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+The wireframe above shows how the game was conceptualized, but....
+These have been added to the [Future Implementations](#future-implementations) section below.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+<br>
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## **Features**
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+<br>
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### **Navigation Bar:**
 
-------
+<br>
 
-## FAQ about the uptime script
+![Navigation Bar](docs/features/focal-nav-bar.png)
 
-**Why have you added this script?**
+The game is designed for simplicity of navigation and so the only navigation option is to the home by clicking the page title. This ensures that it is possible for young children to play the game without much knowledge of how words are spelt. 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+[[Add this back in if you end up including a clickable modal to reopen instructions page! -Clicking on the information icon presents the player with instructions on how to play the game.  The page can be hidden by re-clicking the information icon or clicking the cross icon.]]
 
-**How will this affect me?**
+<br>
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### **Game Instructions Modal:**
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+<br>
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![Instructions Modal](docs/features/focal-landing-modal.png)
 
-**So….?**
+On loading the site, players are greeted with a modal that explains  how the game should be played. This modal pops up automatically at page load using the Bootstrap method and JQuery. 
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+<br>
 
-**Can I opt out?**
+### **Another Feature:**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+<br>
+
+![#](docs/features/focal#.png)
+
+<br>
+
+The player is presented with an image that provides the user with a clue to what 3-letter word needs to be spelt. The user must guess the word and spell it correctly by clicking on each letter in the right order.  
+Once the player is happy with their spelling of the word, they can submit their answer with the 'enter' button.  This is then checked against the correct spelling of the word and the player is provided feedback. The boxes bounce and each turns a particular colour. The colour green means ....., the colour orange means and the colour red means that none of the letters are in the word. 
+If the player answer matches, all squares turn green and the score is incremented by 1.  A new scrambled word is then generated and the answer boxes are cleared, ready for the next spelling attempt.
+The wrong answer span is only incremented by 1 when all 3 tries to spell the word have been used up, so that young children are not disheartened by the existence of too many red X's. 
+
+![Correct answer submitted](documents/#.jpg)
+
+If the user's answer is incorrect, all squares turn red.
+
+![Incorrect answer submitted](.jpg)
+
+On the keyboard, the delete key gives the player the opportunity to delete unchecked inputs. 
+
+![Clear answer](docs/features/gifs/spelling-bee-clear-answer.gif)
+
+<br>
+
+### **Keyboard:**
+
+<br>
+
+![#](.jpg)
+
+Introduces child to concept of keyboard layout but set in alphabetic order so that it is not too difficult for younger users to locate letters. 
+
+<br>
+
+### **Game Outcome Feedback:**
+
+<br>
+
+If the player spells 6 words successfully within the time limit, players are greeted with a message of congratulations.
+
+![#](documents/#.jpg)
+
+<br>
+
+![#](docs/#.jpg)
+
+<br>
+
+If the player is 
+
+<br>
+
+### **Another Feature**
+
+<br>
+
+The intention of the game is to use as little written navigation elements as possible so that it is more intuitive for young users. I chose a recycle button rather than a 'new word' button for this reason. This button generates a new word and clue image when clicked. 
+The styling of the recycle word button is consistent with the rest of the game and has a hover effect applied to the clickable icon. 
+
+![#](docs/#.jpg)
+
+<br>
+
+### **Another Feature:**
+
+<br>
+
+
+
+
+
+<br>
+
+### **Feature Eile:**
+
+<br>
+
+Maybe include this- flex grow etc- set heights and widths were avoided and flex used throughout instead. 
+Keyboard and Gameboard tiles have been made responsive so they get larger as the screen width increases, but also remain square.
+
+![#](docs/#.png)
+
+<br>
+
+When testing the game on smaller devices such as phones, I noticed that game play was less user friendly when the device was rotated to landscape orientation, as the player is not able to view all the necessary elements of score/ timer, answer boxes, picture, scramble boxes and controls without scrolling up and down.  I considered using a media query to shrink everything to fit the screen in these situations or removing some elements, but none of these solutions were workable as there is too much information to fit in that space.  
+
+![#](docs/#.jpg)
+
+<br>
+
+| Responsiveness |    |           |            |           |                         |                  |       | Notes  |
+| :---: | :---:        | :---:     | :---:      | :---:     | :---:                   | :---:            | :---: | :---:  |
+| ---   | iPhone 6/7/8 | iPhone 11 | Galaxy S8+ | iPad Mini | iPad | Macbook Pro 2021 | Desktop > 1200px | 1Phone 6/7/8. Galaxy S8+ & iPad Mini tested virtually using Chrome DevTools. |   
+| Site responsive >= 700px | n/a | n/a | n/a | Good | Good | Good | Good |
+| Site responsive < 699px | Good | Good | Good | n/a | n/a | n/a | n/a |
+| Images display as expected | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
+| Renders as expected | Pass | Pass | Pass | Pass | Pass | Pass | Pass |
+
+<br>
+
+### **Accessibility:**
+
+To ensure that the game is as accessible as possible for all users and compatible with screen readers, I included the following:
+
+* Semantic markup has been used where possible to structure the HTML code.
+* I checked that the colour contrast ratio across the site meets acceptable standards.  When choosing the colour palette, I experimented using the [W3 colour chart](https://w3.com/#) to check that the contrast between background colours and text would be acceptable and provide enough contrast.
+* I have used aria labels for interactive elements such as buttons where no accessible name is provided.
+* Descriptive alt attributes have been given to all images. The alt description for each picture is stored within each object in the wordCollection array. 
+* 
+### **Future Implementations:**
+
+* Sound FX could be used as an additional form of feedback for players to understand whether they have submitted a correct or incorrect answer.  This could also add an extra element of fun to the game for kids.
+* Longer word challenges and levels.
+* A countdown timer.
+* A congratulations modal at the end with animated falling confetti as per my original wireframes idea. 
+* A lot more words and images can eventually be stored in the wordCollection array to keep the challenges varied and reduce the amount of times the same word appears.
+
+<br>
+
+## **Colour Palette**
+
+Colours used are bright, vivid and fun to appeal to the target audience. 
+A rainbow colour palette was chosen as this is my son's favourite colour combination. 
+I used a rainbow palette of colours suggested by ____ on this info page. 
+
+![Focal colour palette](docs/focal-color-palette.jpg)
+
+<br>
+
+## **Typography**
+
+Spacing and typography is consistent throughout the game and I have aimed to use something playful and appealing to children.  
+
+* Headings: .  This is a sans-serif font.
+* Body: This is a sans-serif font.
+
+## **Imagery**
+
+As this is a game aimed at children, I have used imagery appropriate for this goal.  The picture hints were sourced royalty free from [uxwing](https://uxwing.com/).  
+The images are simple, clear and appealing to children. 
+The bee hive image displayed on the landing modal ties in with the traditional theme of a Spelling Bee.
+
+The styling of the answer grid is simple and reminiscent of Wordle- this familiar imagery should mean that the game is intuitive to parents guiding young users and the purpose of the game becomes apparent without even reading the instructions.
+
+Player controls are kept minimal and styled in a way that makes game play intuitive.  The pink recycle button invites the player to generate a new word, communicating its purpose to the young player without any need for text.
+
+<br>
+
+# **Technologies Used**
+
+## **Languages Used**
+
+<br>
+
+HTML, CSS and JavaScript were used to create the game.
+
+<br>
+
+## **Frameworks, Libraries and Programs Used**
+
+<br>
+
+* Git -  Version control.
+* GitHub - All files for the website stored and saved in a repository.
+* GitHub Pages - Used to deploy the final version of the website.
+* Figma - Used to create wireframes.
+* Font Awesome - Used for all icons throughout the website.
+* Google Fonts - Used to import required fonts for the website via the css style page.
+* Google Developer Tools - Used throughout build of website for debugging, checking responsiveness and trialing new features/ styling.
+* Google Lighthouse - Used at testing stage to show statistics for performance, accessibility,  best practices and SEO.
+* Am I Responsive? - For displaying images of how the website looks across a range of devices.
+* Favicon.ico & App Icon Generator - for creating the 16x16px ico favicon.
+
+<br>
+
+# **Deployment and Local Development**
+
+<br> 
+
+## **Deployment**
+
+<br>
+
+The live website has been deployed using GitHub Pages, following the steps below:
+
+1. Log in (or sign up) to GitHub.
+2. Click on the required repository, in this case: brioniCo/focal
+3. Go to the "Settings" menu.
+4. Select the "Pages" tab in the left hand menu - this will jump you to a section called "GitHub Pages".
+5. Under the Build and deployment section, select "main" from the select branch menu.  Select "root" from the dropdown select folder menu.
+6. Click save.  The URL for your live site which has been deployed on GitHub pages is shown at the top of the GitHub pages section.  This sometimes does not display immediately or may require a browser refresh.
+
+The live link can be found [here](https://#)
+
+<br>
+
+## **Local Development**
+
+<br>
+
+### **How to fork:**
+
+<br>
+
+1. Log in (or sign up) to GitHub.
+2. Find the required repository, in this case: brioniCo/spelling-bee-scramble
+3. Click on the "fork" button at the top right of the page.
+
+<br>
+
+### **How to clone:**
+
+<br>
+
+1. Log in (or sign up) to GitHub.
+2. Find the required repository, in this case: brioniCo/focal.
+3. Click on the green code button.  This will give you the choice of cloning the repository using HTTPS, an SSH key or GitHub CLI.  Make your selection and copy the provided URL link.
+4. Open Terminal
+5. Change the current working directory to the location where you want the cloned directory.
+6. Type 'git clone' and then paste the URL you copied earlier.
+7. Press enter.
+
+<br>
+
+# **Testing**
+
+## **Automated Testing**
+
+<br>
+
+### **W3C Validator:**
+
+<br>
+
+I used the [W3C](https://validator.w3.org/) Markup Validation Service to validate the index.html and 404.html page.  They passed with no errors or warnings:
+
+![html validator pass](documents/w3c-focal-validated.png)
+
+<br>
+
+I used the [W3C jigsaw](https://jigsaw.w3.org/css-validator/) CSS Validation Service to validate my CSS stylesheet. It passed with no errors:
+
+![css validator pass](docs/testing/w3c/w3c-jigsaw-css-validated.png)
+
+The following warnings were raised, which relate to the vendor extensions I am using for browser cross compatibility:
+
+![css validator warnings](docs/testing/w3c/focal-w3c-jigsaw-css-warnings.png)
+
+<br>
+
+### **JSHint:**
+
+<br>
+
+I passed my JavaScript code through the linter JSHint to validate and check for any syntax errors.  The only remaining warning relates to the variable wordCollection as this is defined in the words.js file.
+
+![Jshint validation](documents/focal-jshint-validation.png)
+
+<br>
+
+The words.js file was also validated in JSHint. 
+
+### **Lighthouse:**
+
+<br>
+
+I used Lighthouse within Google Chrome developer tools as a way of testing performance, accessibility, best practices and SEO of the site.
+
+<br>
+
+### **Desktop Results**
+
+<br>
+
+![desktop index.html page results](documents/lighthouse/focal-lighthouse-desktop.png)
+
+
+<br>
+
+### **Mobile Results**
+
+<br>
+
+![mobile index.html page results](documents/focal-lighthouse-mobile.png)
+
+<br>
+
+## **Manual Testing**
+
+<br>
+
+### **Testing User Stories:**
+
+<br>
+
+| Goals | How are goals achieved? |
+| --- | --- | 
+| **Site User** |     
+|        |   
+| I want to offer an educational experience to help children with their spelling. | This is achieved by offering 3-letter spelling challenges to help younger children with their learning without discouraging them. | 
+| I want to make sure that the user has an enjoyable, engaging experience so they continue playing and return to the site in the future. | The site has been designed to be simple and intuitive and the aesthetics of the game align with the target user by being bright, bold and fun. | 
+| # | #. |
+| I want to set targets for the user, to keep the experience interesting and challenging. | Targets are set by requiring the player to achieve 5 correct answers to successfully complete the challenge. |
+| I want to make the game responsive over a range of device sizes. | The site has been tested over a range of devices and is responsive while retaining the same structural layout throughout. |
+|        |                                                  
+| **First Time Visitors** |         
+|        | 
+| I am looking for a fun and interactive way to practice and improve my spelling. |  The site is fully interactive and control of the game is intuitive. The fun aspect is brought by design elements such as cartoon images and feedback to let the player know how they are progressing. |
+| I want clear and concise feedback each time I submit a correct or incorrect answer. | Green ticks / answer boxes for correct answers and red crosses/ answer boxes for incorrect answers are used to give players feedback about each spelling they submit. | 
+| I want clear feedback about how close I am to reaching my target number of correct answers. | The score counter displayed in the middle of the screen provides this continual feedback during game play. |
+| I want clear feedback to let me know I have completed the challenge and how to proceed. | Bespoke messages are displayed to the player at the end of each challenge providing feedback and next steps. |
+| I want easy intuitive access to an explanation of how to play the game. | The instructions page providing this information is easily accessible at page load. |
+|        |
+
+<br>
+
+### **Full Testing:**
+
+<br>
+
+Full testing has been carried out on the following devices:
+
+* Macbook Pro 2021 14 inch M1 Pro
+* MacBook Air 
+* iPhone 11
+* iPad 9th generation A2602
+
+The following browsers were used to test on each device:
+
+* Google Chrome
+* Firefox
+* Safari
+
+<br>
+
+| Browser Compatibility |  |        |       |                        
+| :---: | :---:  | :---:   | :---:  |
+|       | Chrome | Firefox | Safari |  
+| Appearance | Good | Good | Good |
+| Responsiveness | Good | Good | Good |
+
+<br>
+
+## **Bugs**
+
+<br>
+
+### **Known Bugs:**
+
+<br>
+
+**1.**  I noticed that the following error is logged on the console page of Google Dev Tools when loading the site:
+
+![#](documents/focal-console-error.png)
+
+<br>
+
+**2.**  Sometimes after the modal box is closed after page load, it pops up a second time. This does not effect the game play but is something that I would troubleshoot further if time permitted. 
+
+<br>
+
+### **Solved Bugs:**
+
+<br>
+
+**1.**  When the delete button was used after the top one or two rows had been filled and checked, it would allow the user to delete those previous lines and so the sequence of letter inputs would go wrong. This bug was solved by adding a conditional statement to the handledelete function that prevented indexes 2 and 5 from being deleted. 
+ [image of code here1]
+ 
+**2.**When the newGame function was run after a word was successfully spelled and the score incremented, it cleared the boxes but not the colours. This was solved by ...
+
+
+**3.**  Delete Return issue
+```js
+
+    if ( === ) {
+        return;
+    }
 
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+**4** Fontawesome icon issue preventing proper functioning of the delete button.
+___
 
-**Anything more?**
+***THis could be the case with mine- check on ipad? How? Or just mention that you read about this.
+![Settings display bug](docs/bugs/settings-menu-display-bug.png)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+I realised this was because the grid template rows value I was using for the class grid-settings-table was set to repeat(3, 1fr). This problem was only showing itself on an ipad.  After some research, I found that using repeat(3, min-content) displayed the settings grid as I wanted and solved the bug.
 
----
+<br>
 
-Happy coding!
+# **Credits**
+
+## **Code Used**
+
+* [Referenced this article on Stack Overflow for solution to how setting difficulty level changes which object the random word is chosen from](https://stackoverflow.com/questions/64712803/change-game-difficulty-javascript)
+* [Referenced this tutorial on YouTube on how to build a Wordle Clone](https://www.youtube.com/watch?v=4-s3g_fU7Vg)
+* Referenced this [YouTube](https://matthewjamestaylor.com/responsive-font-size) when considering how to make the site responsive without having to use media queries.
+* Referenced and modified [this code](https://#/) when...
+* Referenced this code when trying to figure out how to implement a modal that popped up on page load, as it does for the NYTIMES Wordle.
+<br>
+
+## **Media**
+
+* [Royalty free images used for the game logo and word hint pictures](https://uxwing.com/)
+
+<br>
+
+## **Acknowledgements**
+
+<br>
+
+* To my family for supporting me through this journey!
+* To my my Code Institute Mentor Precious Ljege for his help, advice and feedback during our mentoring sessions.
+* To my classsmates Bejamin Reardoon and Matthew Shepherd who took time out
+
+<br>
+
+![Focal spelling game represented on different devices](docs/devices/focal-am-i-responsive.png)
+
+<br>
+
+[View the Focal site on GitHub Pages](https://rkillickdev.github.io/spelling-bee-scramble/)
+
+<br>
+
+> Written with [StackEdit](https://stackedit.io/).

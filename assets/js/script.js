@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let availableTiles = 1;
   let guessedWords = [[]];
   let word;
+  let correctWordCount = 0;
 
    /**
     * code for painting the letter tiles onto the DOM
@@ -19,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
       tile.classList.add("animate__animated");
       tile.setAttribute("id", index +1);
       gameBoard.appendChild(tile);
-      // Trying some new code from here on to see if i can group the tiles into individual row divs to ensure that previous rows cannot be deleted
     }
   }
 
@@ -43,9 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return wordCollection[randomWordIndex];
   }
 
-// const picture = document.querySelector(".clue-image-container");
-// const keyboard = document.getElementById("keyboard-container");
-// const keys = document.querySelectorAll('.keyboard-row > button');
 const closeModalBtn = document.querySelector(".close-modal");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
@@ -128,6 +125,7 @@ function handleSubmitWord() {
     if (currentWord === word) {
       window.alert("Well done - you did it!!!")
       incrementScore();
+  
     }
 
     if (currentWord !== word && guessedWords.length < 3) {
@@ -157,6 +155,12 @@ function incrementScore()   {
   let oldScore = parseInt(document.getElementById("score").innerText);
   document.getElementById("score").innerText = ++oldScore;
 
+  // Increasing the correctWordCount here to head towards ending game 
+  correctWordCount ++;
+
+  if (correctWordCount === 5) {
+  alert(`YES! You have spelled 10 words!`);
+  }
 }
 /**
  * takes a tally of incorrectly spelled words from the DOM and increments by 1 
@@ -166,10 +170,13 @@ function incrementWrongAnswer() {
   document.getElementById("incorrect").innerText = ++oldScore;
 }
 
-function gameOver() {
-  
+// function gameOver() {
+//   if (correctWordCount === 10) {
+//     gameOver = true;
+//   }
 
-}
+
+// }
 /**
 * Keeps track of how many words have been guessed so far and how many tiles are still available. 
 *
@@ -239,12 +246,12 @@ for (let i = 0; i < keys.length; i++) {
 /*Function that resets the word to spell without effecting increment score */
 //
  function startNewGame() {
-  // Reseting variables here 
+  //variable reset here 
   availableTiles = 1;
   guessedWords = [[]];
   guessedWordCount = 0;
 
-  // Clearing DOM elements here
+  // Clear DOM elements
   const gameBoard = document.getElementById("letter-board");
   gameBoard.innerHTML = "";
 

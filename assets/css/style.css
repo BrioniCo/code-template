@@ -21,6 +21,7 @@ body {
 
 #rainbow-color-page-title {
   font-size: 300%;
+  font-weight: bolder;
 }
 
 .modal {
@@ -29,7 +30,7 @@ body {
   justify-content: center;
   gap: 0.4rem;
 
-  max-width: 440px;
+  max-width: 450px;
   padding: 1.3rem;
   min-height: 550px;
   position: absolute;
@@ -40,6 +41,12 @@ body {
   z-index : 2;
   font-size: 200%;
 }
+
+#modal-content {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 
 .modal .flex {
   display: flex;
@@ -153,7 +160,7 @@ body {
 #keyboard-container {
   display: flex;
   flex-wrap: wrap;
-  width: 70%;
+  width: 90%;
   margin-top: 20px;
 }
 
@@ -195,11 +202,12 @@ body {
 }
 
 #enter-button {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: bold;
   background: #00BB00;
   border: 1px solid black;
 }
-     
+
 .clue-image-container {
   max-width: 100px; 
   min-height: 100px;
@@ -216,8 +224,8 @@ body {
 }  
 
 .btn {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   color:#C62293;
@@ -262,3 +270,21 @@ body {
   font-size : 170%;
 
 }
+
+  /* Media queries for smallest screens, keyboard made as wide as possible to avoid crushing effect*/
+  @media screen and (max-width: 432px) {
+    .close-modal {
+      transform: translate(140px, -90px);
+    }
+    
+    .keyboard-row button {
+      width: 90px;
+    }
+
+    #keyboard-container {
+      width: 98%;
+    }
+    #enter-button {
+      font-size: 14px;
+    }
+  }

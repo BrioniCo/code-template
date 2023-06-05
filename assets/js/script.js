@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 const closeModalBtn = document.querySelector(".close-modal");
+const openModalBtn = document.querySelector(".btn-open");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const newGameBtn = document.getElementById("start-new-game");

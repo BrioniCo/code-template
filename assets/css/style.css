@@ -29,7 +29,7 @@ body {
   justify-content: center;
   gap: 0.4rem;
 
-  width: 450px;
+  max-width: 440px;
   padding: 1.3rem;
   min-height: 550px;
   position: absolute;
@@ -112,6 +112,7 @@ body {
   justify-content: space-between;
   align-items: center; 
   height: 100%;
+  width: 100%;
 }
 
 .title-container {
@@ -169,6 +170,7 @@ body {
   width: 60px;
   height: 60px;
   border: 1px solid #ccc;
+  color: black;
 
   border-radius: 2px;
   font-size: 30px;
@@ -194,6 +196,8 @@ body {
 
 #enter-button {
   font-size: 20px;
+  background: #00BB00;
+  border: 1px solid black;
 }
      
 .clue-image-container {

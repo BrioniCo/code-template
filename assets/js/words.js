@@ -127,6 +127,63 @@ const wordCollection = [{
 },{
     word: "fun",
     image: "assets/images/fun-icon.png",
+},{
+    word: "ape",
+    image: "assets/images/ape-icon.png",
+},{
+    word: "air",
+    image: "assets/images/air-icon.png",
+},{
+    word: "bad",
+    image: "assets/images/bad-icon.png",
+},{
+    word: "bag",
+    image: "assets/images/bag-icon.png",
+},{
+    word: "bye",
+    image: "assets/images/bye-icon.png",
+},{
+    word: "cry",
+    image: "assets/images/cry-icon.png",
+},{
+    word: "eye",
+    image: "assets/images/eye-icon.png",
+},{
+    word: "fix",
+    image: "assets/images/fix-icon.png",
+},{
+    word: "gel",
+    image: "assets/images/gel-icon.png",
+},{
+    word: "hen",
+    image: "assets/images/fun-icon.png",
+},{
+    word: "jet",
+    image: "assets/images/jet-icon.png",
+},{
+    word: "nap",
+    image: "assets/images/nap-icon.png",
+},{
+    word: "pee",
+    image: "assets/images/pee-icon.png",
+},{
+    word: "pet",
+    image: "assets/images/pet-icon.png",
+},{
+    word: "rat",
+    image: "assets/images/rat-icon.png",
+},{
+    word: "see",
+    image: "assets/images/see-icon.png",
+},{
+    word: "tap",
+    image: "assets/images/tap-icon.png",
+},{
+    word: "why",
+    image: "assets/images/why-icon.png",
+},{
+    word: "who",
+    image: "assets/images/who-icon.png",
 }]
 
 

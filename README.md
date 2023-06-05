@@ -1,13 +1,13 @@
-# **Focal Spelling Game**
+# **'Focal' Spelling Game**
 
-Spelling Bee Scramble is a fun interactive game based loosely on the popular NYTimes 'Wordle' aimed at children aged approximately 4-6 who would like to practice and improve their spelling and guessing abilities.  Players must use the clue image to guess what 3-letter word needs to be spelled and then have three chances to spell it.   
+Focal is a fun interactive game for children aged approximately 4-6 who would are beginning to learn how to spell small words and enjoy guessing challenges. It is based loosely on the popular NYTimes 5-letter word guessing game called 'Wordle' .  In 'Focal', players must use the clue image to guess what 3-letter word needs to be spelled and then they have three chances to spell it. The title 'Focal' refers to the Irish word for 'word' and so is a good play on 'Wordle'.
 <br>
 
-![Spelling Bee Scramble game represented on different devices](docs/devices/spelling-bee-am-i-responsive.png)
+![Focal represented on different devices](documents/focal-am-i-responsive.png)
 
 <br>
 
-[View the Focal site on GitHub Pages](https://brioniCo.github.io/focalpp2/)
+[View the Focal site on GitHub Pages](https://brionico.github.io/focalpp2/)
 
 <br>
 
@@ -445,7 +445,7 @@ I used Lighthouse within Google Chrome developer tools as a way of testing perfo
 
 <br>
 
-### **Full Testing:**
+### **Further Testing:**
 
 <br>
 
@@ -520,8 +520,8 @@ I realised this was because the grid template rows value I was using for the cla
 
 # **Credits**
 
-## **Code Used**
 
+* The readme used as a guiding template was from for Spelling Bee Scramble Game: [Wawas woods](https://github.com/E#). In addition, instructions on how to fork a repository were quoted from this readme. 
 * [Referenced this article on Stack Overflow for solution to how setting difficulty level changes which object the random word is chosen from](https://stackoverflow.com/questions/64712803/change-game-difficulty-javascript)
 * [Referenced this tutorial on YouTube on how to build a Wordle Clone](https://www.youtube.com/watch?v=4-s3g_fU7Vg)
 * Referenced this [YouTube](https://matthewjamestaylor.com/responsive-font-size) when considering how to make the site responsive without having to use media queries.
@@ -539,9 +539,16 @@ I realised this was because the grid template rows value I was using for the cla
 
 <br>
 
-* To my family for supporting me through this journey!
-* To my my Code Institute Mentor Precious Ljege for his help, advice and feedback during our mentoring sessions.
-* To my classsmates Bejamin Reardoon and Matthew Shepherd who took time out
+
+The site was completed as a Portfolio 2 Project piece for the Full Stack Software Developer (e-Commerce) Diploma at the [Code Institute](https://codeinstitute.net/). 
+I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for his help and guidance. I would also like to thank the Code Institute Slack community for all the invaluable information I found there, the tutorial sessions from student help as well as our Cohort Facilitator Alan Bushnell for the very useful weekly stand-up sessions and general insights, support and information.
+
+In particular I would also like to thank two of my classmates, Benjamin Riordan and Matthew Shepherd who repeatedly took time out of their own studies to help me out with issues I was having. 
+
+Brioni Connolly 2023.
+
+[Back to top](<#contents>)
+
 
 <br>
 

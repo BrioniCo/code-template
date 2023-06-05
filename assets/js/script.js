@@ -159,7 +159,13 @@ function incrementScore()   {
   correctWordCount ++;
 
   if (correctWordCount === 5) {
-  alert(`YES! You have spelled 10 words!`);
+  alert(`YES! You have spelled 5 words!`);
+  return;
+  }
+
+  if (correctWordCount === 10) {
+    alert("WOW!! You spelled 10 words! You are learning so much!");
+    return;
   }
 }
 /**

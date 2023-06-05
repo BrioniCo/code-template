@@ -43,7 +43,7 @@ body {
 }
 
 #modal-content {
-  margin-left: 10px;
+  margin-left: 15px;
   margin-right: 10px;
 }
 
@@ -243,7 +243,7 @@ body {
   width: 70px;
   height: 70px;
   font-size: 2rem;
-  margin: 0 30px;
+  margin: 10px 30px;
   transition: all 0.5s;
 }
 .big-btn:active, .big-btn:hover {
@@ -260,10 +260,16 @@ body {
 /* Styling for correct & incorrect answer symbols, fontawesome icons */
 #correct-symbol {
   color: #00BB00;
+  font-size: 140%;
 }
 
 #incorrect-symbol {
   color: #FF0066;
+  font-size: 140%;
+}
+
+#incorrect, #correct {
+  font-size: 140%;
 }
 
 .increment-symbols {

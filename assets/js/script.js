@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let index = 0; index < 9; index++) {
       let tile = document.createElement("div");
       tile.classList.add("tile");
-      // Adding a class to each tile for 'bounce animation from animate css'
+    // Adding a class to each tile for 'bounce animation from animate css'
       tile.classList.add("animate__animated");
       tile.setAttribute("id", index +1);
       gameBoard.appendChild(tile);
@@ -25,14 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   createTiles();
 
-   // Call getRandomWord() to get a random word object
     const randomWord = getRandomWord();
     const imageContainer = document.querySelector('.clue-image-container');
     const imageElement = document.createElement('img');
     imageElement.src = randomWord.image;
     imageContainer.appendChild(imageElement);
 
-    word = randomWord.word
+    word = randomWord.word;
 
   /**
   * Takes a random word with accompanying image from the words array
@@ -44,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 const closeModalBtn = document.querySelector(".close-modal");
-const openModalBtn = document.querySelector(".btn-open");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const newGameBtn = document.getElementById("start-new-game");
@@ -74,32 +72,32 @@ document.addEventListener("keydown", function (e) {
 
 /**
 * checks which letter tiles contain the right letter 
-* in the right place and allow it to change color accordingly
+* in the right place and allow it to change color accordingly, coding from Ian Lenehan with adjustments, https://www.youtube.com/watch?v=j7OhcuZQ-q8
 *
 */
 function getTileColor(letter, index) {
-  const isCorrectLetter = word.includes(letter)
+  const isCorrectLetter = word.includes(letter);
 
 
   if (!isCorrectLetter) {
     return "#CD5C5C";
   }
 
-  const letterInCorrectPosition = word.charAt(index)
-  const isCorrectPosition = letter === letterInCorrectPosition
+  const letterInCorrectPosition = word.charAt(index);
+  const isCorrectPosition = letter === letterInCorrectPosition;
 
   if (isCorrectPosition && isCorrectLetter) {
     return "#00BB00";
   }
   if (isCorrectLetter && !isCorrectPosition)
-  return "orange"
+  return "orange";
 }
 
 function handleSubmitWord() {
     const currentWordArray = getCurrentWordArray();
 
     if (currentWordArray.length !== 3) {
-      window.alert("Word should be 3 letters!")
+      window.alert("Word should be 3 letters!");
     return ;
     }
 
@@ -110,13 +108,13 @@ function handleSubmitWord() {
 
     currentWordArray.forEach((letter, index) => {
       setTimeout(() => {
-      // Change the colour of tile that contains the correct letter
+    // Change the colour of tile that contains the correct letter
       const tileColor = getTileColor(letter, index);
       const letterId = firstLetterId + index;
       const letterEl = document.getElementById(letterId);
 
         letterEl.classList.add("animate__bounce");
-        letterEl.style = `background-color:${tileColor};border-color:${tileColor}`
+        letterEl.style = `background-color:${tileColor};border-color:${tileColor}`;
       }, interval * index) ; 
 
     });
@@ -124,17 +122,17 @@ function handleSubmitWord() {
     guessedWordCount += 1 ;
 
     if (currentWord === word) {
-      window.alert("Well done - you did it!!!")
+      window.alert("CORRECT!!");
       incrementScore();
   
     }
 
     if (currentWord !== word && guessedWords.length < 3) {
-      window.alert("That's not it- try again!")
+      window.alert("That's not it- try again!");
     }
 
     if (guessedWords.length === 3 && currentWord !== word) {
-      window.alert(`Sorry, you have no more tries! The word is ${word}`)
+      window.alert(`Sorry, you have no more tries! The word is ${word}`);
       incrementWrongAnswer();
     }
 
@@ -177,12 +175,6 @@ function incrementWrongAnswer() {
   document.getElementById("incorrect").innerText = ++oldScore;
 }
 
-// function gameOver() {
-//   if (correctWordCount === 10) {
-//     gameOver = true;
-//   }
-
-
 // }
 /**
 * Keeps track of how many words have been guessed so far and how many tiles are still available. 
@@ -207,7 +199,7 @@ function updateGuessedWords(letter) {
 function handleDeleteLetter() {
   const currentWordArray = getCurrentWordArray();
 
-// Conditional statement below ensure that letters from already checked rows cannot be deleted, ie indexes 2 and 5
+// Conditional statement below ensure that letters from already checked rows cannot be deleted, ie indexes 2 and 5- bug fix
   if (currentWordArray.length > 0) {
     const lastLetterIndex = currentWordArray.length -1;
 
@@ -233,16 +225,16 @@ const keys = document.querySelectorAll('.keyboard-row > button');
 //
 for (let i = 0; i < keys.length; i++) {
   keys[i].onclick = ({ target }) => {
-    const letter = target.getAttribute("data-key");
+    let letter = target.getAttribute("data-key");
 
     if (letter === 'enter') {
-      handleSubmitWord()
+      handleSubmitWord();
       return;
     }
 
     if (letter === 'del') {
-      handleDeleteLetter()
-      return
+      handleDeleteLetter();
+      return;
     }
 
     updateGuessedWords(letter);
@@ -258,7 +250,7 @@ for (let i = 0; i < keys.length; i++) {
   guessedWords = [[]];
   guessedWordCount = 0;
 
-  // Clear DOM elements
+  // Clearing DOM elements
   const gameBoard = document.getElementById("letter-board");
   gameBoard.innerHTML = "";
 

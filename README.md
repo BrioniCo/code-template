@@ -306,13 +306,8 @@ The following warnings were raised, which relate to the vendor extensions I am u
 
 <br>
 
-I passed my JavaScript code through the linter JSHint to validate and check for any syntax errors.  The only remaining warning relates to the variable wordCollection as this is defined in the words.js file.
-
-![Jshint validation](documents/focal-jshint-validation.png)
-
-<br>
-
-The words.js file was also validated in JSHint. 
+I passed my JavaScript code through the linter JSHint to validate and check for any syntax errors.  There is a warning relates to the variable wordCollection as this is defined in the words.js file. Another warning states that "functions declared within loops referencing an outer scoped variable" - I cannot address this without breaking the code before the submission time. 
+ 
 
 ### **Lighthouse:**
 
@@ -324,6 +319,7 @@ I used Lighthouse within Google Chrome developer tools as a way of testing perfo
 
 ### **Desktop Results**
 
+The results are quite good for desktop. There is some room for improvement in relation to the descriptors ion aria-labels. 
 <br>
 
 ![desktop index.html page results](documentation/lighthouse-desktop.png)
@@ -332,6 +328,8 @@ I used Lighthouse within Google Chrome developer tools as a way of testing perfo
 <br>
 
 ### **Mobile Results**
+
+The performance of the page load is hindered by the Bootstrap and JQuery links added to launch the welcome modal. 
 
 <br>
 
@@ -351,7 +349,7 @@ I used Lighthouse within Google Chrome developer tools as a way of testing perfo
 | --- | --- | 
 | **Site User** |     
 |        |                                                  
-| ** Visitors** |         
+| Visitors|         
 **1.** I want a fun and engaging educational experience that helps with my spelling.
 The site is fully interactive and control of the game is intuitive. The fun aspect is brought by design elements such as fun images and hidden toilet humour. There is feedback to let the player know how they are progressing. 3-letter spelling challenges help younger children with their learning without discouraging them.
 **2.** I want to be engaged and encouraged to hit certain spelling targets to keep the experience interesting and challenging. 
@@ -514,13 +512,11 @@ This is how you clone a project from GitHub:
 
 # **Credits**
 
-* I used this [https://www.youtube.com/watch?v=j7OhcuZQ-q8] tutorial by Ian Linehan to sketch out the basic structure of game. 
-* The readme used as a guiding template was from for Spelling Bee Scramble Game: [Wawas woods](https://github.com/E#). In addition, instructions on how to fork a repository were quoted from this readme. 
-* [Referenced this article on Stack Overflow for solution to how setting difficulty level changes which object the random word is chosen from](https://stackoverflow.com/questions/64712803/change-game-difficulty-javascript)
-* [Referenced this tutorial on YouTube on how to build a Wordle Clone](https://www.youtube.com/watch?v=4-s3g_fU7Vg)
-* Referenced this [YouTube](https://matthewjamestaylor.com/responsive-font-size) when considering how to make the site responsive without having to use media queries.
-* Referenced and modified [this code](https://#/) when...
-* Referenced this code when trying to figure out how to implement a modal that popped up on page load, as it does for the NYTIMES Wordle.
+* I used this [https://www.youtube.com/watch?v=j7OhcuZQ-q8] tutorial by Ian Lenihan to sketch out the basic structure of game. 
+* This tutorial was also used as reference [How to build a Wordle Clone](https://www.youtube.com/watch?v=4-s3g_fU7Vg)
+* Referenced this [YouTube](https://www.youtube.com/@KevinPowell) when considering how to make the site responsive without having to use too many media queries.
+* To create the instructions modal, I used some code from this tutorial: [Bootstrap modal Tutorial Republic](https://www.tutorialrepublic.com/faq/how-to-launch-bootstrap-modal-on-page-load.php) and this tutorial: [Modal, Free Code Camp](https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/)
+
 <br>
 
 ## **Media**
@@ -538,6 +534,8 @@ The site was completed as a Portfolio 2 Project piece for the Full Stack Softwar
 I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for his help and guidance. I would also like to thank the Code Institute Slack community for all the invaluable information I found there, the tutorial sessions from student help as well as our Cohort Facilitator Alan Bushnell for the very useful weekly stand-up sessions and general insights, support and information.
 
 In particular I would also like to thank two of my classmates, Benjamin Riordan and Matthew Shepherd who repeatedly took time out of their own studies to help me out with issues I was having. 
+
+This was a challenging project for me and there is plenty of room for improvement with my finished project but I am happy with what I have achieved and eager to implement more exciting features in the future. 
 
 Brioni Connolly 2023.
 

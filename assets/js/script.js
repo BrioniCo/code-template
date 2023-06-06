@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageContainer = document.querySelector('.clue-image-container');
     const imageElement = document.createElement('img');
     imageElement.src = randomWord.image;
+    imageElement.alt = randomWord.alt;
     imageContainer.appendChild(imageElement);
 
     word = randomWord.word;

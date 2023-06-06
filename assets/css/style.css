@@ -116,11 +116,13 @@ body {
 #orange-span {
 background: white;
 border-radius: 2px;
+font-weight: bold;
 }
 
 #green-span {
 background: white;
 border-radius: 2px;
+font-weight: bold;
 }
 
 #main-game-container {

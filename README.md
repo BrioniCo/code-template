@@ -144,83 +144,48 @@ If the player's answer matches, all squares turn green and the score is incremen
 ![Keyboard](documentation/keyboard.png)
 
 The onscreen keyboard introduces the child user to the concept of a keyboard layout but is set in alphabetic order so that it is not too difficult for younger users to locate letters. The 'enter' button has been made to stand out by colouring it green.
+On the keyboard, the delete key gives the player the opportunity to delete unchecked inputs and is decorated with a font awesome icon.
 <br>
 
-![Green 'enter' button](documentation/enter.png)
+![Green 'enter'/submit button](documentation/enter.png)
 
 <br>
 
  This button is used to submit the guessed word. It is coloured brightly and in keeping with the colour palette used in the rainbow coloured game title. There is a subtle hover effect added to the keys; the letters shift to the same pink that features on the game board and the title on a cursor hover. 
 
 <br>
-If the user's answer is incorrect, all squares turn red.
-A new scrambled word is then generated and the answer boxes are cleared, ready for the next spelling attempt.
-The wrong answer span is only incremented by 1 when all 3 tries to spell the word have been used up, so that young children are not disheartened by the existence of too many red X's. 
-
-![Incorrect answer submitted](.jpg)
-
-On the keyboard, the delete key gives the player the opportunity to delete unchecked inputs. 
-
-![Clear answer](docs/features/gifs/spelling-bee-clear-answer.gif)
-
-<br>
-The game is designed for simplicity of navigation and so the only navigation option is to generate a new word. This ensures that it is possible for young children to play the game without much knowledge of how words are spelt. 
-
-
-
-<br>
-
-![#](.jpg)
-
-
-<br>
 
 ### **Game Outcome Feedback:**
 
-<br>
+Alert modals pop out at various intervals with congratulations and warnings. When the user has reached 5 words spelt correctly, the modal will congratulate them. A congratulatory modal also appears after 10 words have been spelt correctly.
 
-If the player spells 6 words successfully within the time limit, players are greeted with a message of congratulations.
+### **Score Counter**
 
-![#](documents/#.jpg)
+The score counter, in keeping with the rest of the game, is simple and clear.
+The wrong answer span is only incremented by 1 when all 3 tries to spell the word have been used up, so that young children are not disheartened by the existence of too many red X's. 
 
-<br>
-
-![#](docs/#.jpg)
-
-<br>
-
-If the player is 
+![Score counter](documentation/scores.png)
 
 <br>
 
 ### **Another Feature**
 
-<br>
-
-The intention of the game is to use as little written navigation elements as possible so that it is more intuitive for young users. I chose a recycle button rather than a 'new word' button for this reason. This button generates a new word and clue image when clicked. 
+The intention of the game is to use as little written navigation elements as possible so that it is more intuitive for young users. Informed by this intent, the only navigation option available to the user is the recycle button to generate a new word. The commonly used 'recycle' symbol communicates its purpose intuitively. This ensures that it is possible for young children to play the game without much knowledge of how words are spelled. This button generates a new word and clue image when clicked. 
 The styling of the recycle word button is consistent with the rest of the game and has a hover effect applied to the clickable icon. 
 
-![#](docs/#.jpg)
+![Recycle button](documentation/recycle-word.png)
 
 <br>
 
-### **Another Feature:**
+### **Page Title**
+The rainbow page title was achieved using a series of spans that were individually coloured within the HTML document. The developer's son responds positively to anything rainbow-coloured and so the title styling was chosen as per this preference.
+<br>
+
+![Rainbow title](documentation/title-screenshot.png)
+
 
 <br>
 
-### **Feature Eile:**
-
-<br>
-
-
-
-![#](docs/#.png)
-
-<br>
-
-![#](docs/#.jpg)
-
-<br>
 
 | Responsiveness |    |           |            |           |                         |                  |       | Notes  |
 | :---: | :---:        | :---:     | :---:      | :---:     | :---:                   | :---:            | :---: | :---:  |
@@ -236,41 +201,38 @@ The styling of the recycle word button is consistent with the rest of the game a
 
 To ensure that the game is as accessible as possible for all users and compatible with screen readers, I included the following:
 
-* Semantic markup has been used where possible to structure the HTML code.
-* I checked that the colour contrast ratio across the site meets acceptable standards.  When choosing the colour palette, I experimented using the [W3 colour chart](https://w3.com/#) to check that the contrast between background colours and text would be acceptable and provide enough contrast.
-* I have used aria labels for interactive elements such as buttons where no accessible name is provided.
+* Colour contrast ratio was checked across the site to ensure that it meets acceptable standards. The [W3 colour chart](https://www.w3schools.com/colors/color_tryit.asp?hex=6A5ACD) was used when choosing the colour palette to ensure that the contrast between background colours and text would be acceptable and provide enough contrast. Some adjustment was needed in the welcome modal; a white background was added to the spans containing 'Green' and 'Orange'. 
+* Aria labels for interactive elements such as buttons have been used.
 * Descriptive alt attributes have been given to all images. The alt description for each picture is stored within each object in the wordCollection array. 
 * 
-### **Future Implementations:**
+### **Future Features:**
 
-* Sound FX could be used as an additional form of feedback for players to understand whether they have submitted a correct or incorrect answer.  This could also add an extra element of fun to the game for kids.
-* Longer word challenges and levels.
-* A countdown timer.
-* A congratulations modal at the end with animated falling confetti as per my original wireframes idea. 
-* A lot more words and images can eventually be stored in the wordCollection array to keep the challenges varied and reduce the amount of times the same word appears.
+* When the game was being conceptualise the developer planned to utilize sound effects at each keyboard click and a winning bell sound for each correct answer submitted. Unfortunately, the implementation of this element was not poissible at this time due to limited time and skill but could be used as an additional form of feedback for players in the future, with increased JS knowledge.  This could also add an extra element of fun to the game for children.
+* A great future feature would be the inclusion of longer word challenges and levels. 
+* A countdown timer would be a challenging and interactive addition in the future. 
+* At the conceptualization stage, the developer hoped to add a full size congratulations pop up modal with animated confetti. This feature was not implemented due to time constraints. 
+* A lot more words and images could eventually be stored in the wordCollection array to keep the challenges varied and reduce the amount of times the same word appears.
+* A 404 error page would be a good future feature. 
 
 <br>
 
 ## **Colour Palette**
 
 Colours used are bright, vivid and fun to appeal to the target audience. 
-A rainbow colour palette was chosen as this is my son's favourite colour combination. 
-I used a rainbow palette of colours suggested by ____ on this info page. 
+A rainbow colour palette was chosen as this was the developer's son's favourite colour combination. 
+The rainbow palette of colours suggested by ____ on this info page was used with some adjustments to the red shade. 
 
-![Focal colour palette](docs/focal-color-palette.jpg)
+![Focal colour palette](documentation/rainbow-palette.png)
 
 <br>
 
 ## **Typography**
 
-Spacing and typography is consistent throughout the game and I have aimed to use something playful and appealing to children.  
-
-* Headings: .  This is a sans-serif font.
-* Body: This is a sans-serif font.
+Lexend was the Google fotn chosen as it is a clear and playful font choice that worked well with all the elements. A fall-back of sans-serif has been set. 
 
 ## **Imagery**
 
-As this is a game aimed at children, I have used imagery appropriate for this goal.  The picture hints were sourced royalty free from [uxwing](https://uxwing.com/).  
+As this is a game aimed at children, imagery appropriate for this goal has been used.  The picture hints were sourced royalty free from [uxwing](https://uxwing.com/).  
 The images are simple, clear and appealing to children. 
 The bee hive image displayed on the landing modal ties in with the traditional theme of a Spelling Bee.
 
@@ -294,16 +256,20 @@ HTML, CSS and JavaScript were used to create the game.
 
 <br>
 
-[CSS animate](https://animate.style/)
+* [CSS animate](https://animate.style/) used to create the bouncing box animations
 * Git -  Version control.
 * GitHub - All files for the website stored and saved in a repository.
 * GitHub Pages - Used to deploy the final version of the website.
-* Figma - Used to create wireframes.
-* Font Awesome - Used for all icons throughout the website.
-* Google Fonts - Used to import required fonts for the website via the css style page.
-* Google Developer Tools - Used throughout build of website for debugging, checking responsiveness and trialing new features/ styling.
+* [Figma](https://figma.com/wireframes/) was used to create the wireframes.
+* The icons came from [Font Awesome](https://fontawesome.com/).
+* [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/)- Used throughout build of website for debugging, checking responsiveness and trialing new features/ styling.
 * Google Lighthouse - Used at testing stage to show statistics for performance, accessibility,  best practices and SEO.
 * Am I Responsive? - For displaying images of how the website looks across a range of devices.
+* The font came from [Google Fonts](https://fonts.google.com/).
+* This tutorial by developer Ian Lenehan was an invaluable resource in the structuring of the skeleton of the game. (https://www.youtube.com/watch?v=j7OhcuZQ-q8)
+*  [StackEdit](https://stackedit.io/) for markup.
+* Bootstrap and JQuery was used for the pop-up modal. 
+* The Readme used as a guiding template was from Ewan Colquhoun for Wawas woods: [Wawas woods](https://github.com/EwanColquhoun/wawaswoods). In addition, instructions on how to fork a repository were quoted from this readme. 
 
 
 <br>
@@ -320,15 +286,15 @@ HTML, CSS and JavaScript were used to create the game.
 
 I used the [W3C](https://validator.w3.org/) Markup Validation Service to validate the index.html page. It returned one warning: "Warning: The type attribute is unnecessary for JavaScript resources." After some research I learned that this is a problem that stems directly from the developer of the Bootstrap code that allows the pop-up modal to function. Unfortunately I could not find a solution that allows the rest of my code to function unhindered. See discussion: [W3C Validator error discussion on Wordpress](https://wordpress.org/support/topic/how-to-remove-unnecessary-type-attribute-for-javascript/)
 
-![html validator pass](documents/w3-validator-warning.png)
+![html validator pass](documentation/w3-validator-warning.png)
 
 <br>
 
 I used the [W3C jigsaw](https://jigsaw.w3.org/css-validator/) CSS Validation Service to validate my CSS stylesheet. It passed with no errors:
 
-![css validator pass](documents/w3c-validator-pass.png)
+![css validator pass](documentation/w3c-validator-pass.png)
 
-![css validator pass](docs/testing/w3c/w3c-jigsaw-css-validated.png)
+<br>
 
 The following warnings were raised, which relate to the vendor extensions I am using for browser cross compatibility:
 
@@ -360,7 +326,7 @@ I used Lighthouse within Google Chrome developer tools as a way of testing perfo
 
 <br>
 
-![desktop index.html page results](documents/lighthouse/focal-lighthouse-desktop.png)
+![desktop index.html page results](documentation/lighthouse-desktop.png)
 
 
 <br>
@@ -369,7 +335,7 @@ I used Lighthouse within Google Chrome developer tools as a way of testing perfo
 
 <br>
 
-![mobile index.html page results](documentation/focal-lighthouse-mobile.png)
+![mobile index.html page results](documentation/lighthouse-mobile.png)
 
 <br>
 
@@ -384,22 +350,23 @@ I used Lighthouse within Google Chrome developer tools as a way of testing perfo
 | Goals | How are goals achieved? |
 | --- | --- | 
 | **Site User** |     
-|        |   
-| I want to offer an educational experience to help children with their spelling. | This is achieved by offering 3-letter spelling challenges to help younger children with their learning without discouraging them. | 
-| I want to make sure that the user has an enjoyable, engaging experience so they continue playing and return to the site in the future. | The site has been designed to be simple and intuitive and the aesthetics of the game align with the target user by being bright, bold and fun. | 
-| # | #. |
-| I want to set targets for the user, to keep the experience interesting and challenging. | Targets are set by requiring the player to achieve 5 correct answers to successfully complete the challenge. |
-| I want to make the game responsive over a range of device sizes. | The site has been tested over a range of devices and is responsive while retaining the same structural layout throughout. |
 |        |                                                  
-| **First Time Visitors** |         
-|        | 
-| I am looking for a fun and interactive way to practice and improve my spelling. |  The site is fully interactive and control of the game is intuitive. The fun aspect is brought by design elements such as cartoon images and feedback to let the player know how they are progressing. |
-| I want clear and concise feedback each time I submit a correct or incorrect answer. | Green ticks / answer boxes for correct answers and red crosses/ answer boxes for incorrect answers are used to give players feedback about each spelling they submit. | 
-| I want clear feedback about how close I am to reaching my target number of correct answers. | The score counter displayed in the middle of the screen provides this continual feedback during game play. |
-| I want clear feedback to let me know I have completed the challenge and how to proceed. | Bespoke messages are displayed to the player at the end of each challenge providing feedback and next steps. |
-| I want easy intuitive access to an explanation of how to play the game. | The instructions page providing this information is easily accessible at page load. |
-|        |
-
+| ** Visitors** |         
+**1.** I want a fun and engaging educational experience that helps with my spelling.
+The site is fully interactive and control of the game is intuitive. The fun aspect is brought by design elements such as fun images and hidden toilet humour. There is feedback to let the player know how they are progressing. 3-letter spelling challenges help younger children with their learning without discouraging them.
+**2.** I want to be engaged and encouraged to hit certain spelling targets to keep the experience interesting and challenging. 
+| A large collection of words has been input into the wordCollection array and so the challenges are varied and interesting. In addition to this there is feedback to let the player know how they are progressing. 
+**3.** I need the game to be responsive over a range of device sizes. 
+| Flexbox has been used to achieve responsive layout and media queries add more layout complexity at smaller screen sizes. 
+**4.**  I want to be able to keep track of my incorrect and correct guesses. 
+| Green ticks for correct answers and red crosses for incorrect answers are used to give players feedback about each spelling they submit. The red x's only increment upwards after 3 tries have been used up so as not to discourage young users.
+**5.** I want clear and concise feedback each time I submit a correct or incorrect answer. 
+The score counter displayed in the middle of the screen provides this continual feedback during game play. Modal alert boxes are triggered at various intervals, providing concise feedback. A bespoke message informs the user what the word was after 3 wrong inputs 
+**6.** I want easy intuitive access to an explanation of how to play the game.
+| An instruction modal pops up at page load using Bootstrap and communicates the game instructions clearly. 
+**7.** I want to be greeted by game that looks like it has been designed with me in mind. 
+| The imagery is fun and clear and the colour palette bright and appealing to young users. 
+|        
 <br>
 
 ### **Further Testing:**
@@ -410,8 +377,7 @@ Full testing has been carried out on the following devices:
 
 * Macbook Pro 2021 14 inch M1 Pro
 * MacBook Air 
-* iPhone 11
-* iPad 9th generation A2602
+* iPhone 13
 
 The following browsers were used to test on each device:
 
@@ -429,6 +395,8 @@ The following browsers were used to test on each device:
 
 <br>
 
+Lastly, the game was tested extensively by the developer's son and his friend. They were both able to navigate through it without issue and enjoyed the experience and challenge. 
+
 ## **Bugs**
 
 <br>
@@ -440,6 +408,8 @@ The following browsers were used to test on each device:
 **1.**   When the game is being viewed in Chrome Dev tools, the welcome instructions modal box reopens once more after being closed. The game has been tested on several devices outside of Google dev tools and this issue has not arisen again but the developer considers it a possibility. This would not effect the game play but is something that may benfit from troubleshooting in the future.
 
 **2** The following error shows up in the console when the page is loaded: "Failed to load resource: the server responded with a status of 404 ()". This seems to have been caused by out-of-date extensions within the code institute template. This error does not effect the proper functioning of the game but is something that the developer would like to investigate and research further once the project has been submitted. 
+
+**3** A 404 error pops up in the console. This is due to outdated extensions on the CI template. A 404 error page has been mentioned as a future feature. 
 
 <br>
 

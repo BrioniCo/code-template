@@ -113,6 +113,16 @@ body {
   display: none;
 }
 
+#orange-span {
+background: white;
+border-radius: 2px;
+}
+
+#green-span {
+background: white;
+border-radius: 2px;
+}
+
 #main-game-container {
   display: flex;
   flex-direction: column;

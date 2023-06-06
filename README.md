@@ -1,6 +1,6 @@
 # **'Focal' Spelling Game**
 
-Focal is a fun interactive game for children aged approximately 4-6 who would are beginning to learn how to spell small words and enjoy guessing challenges. It is based loosely on the popular NYTimes 5-letter word guessing game called 'Wordle' .  In 'Focal', players must use the clue image to guess what 3-letter word needs to be spelled and then they have three chances to spell it. The title 'Focal' refers to the Irish word for 'word' and so is a good play on 'Wordle'.
+Focal is a fun interactive game for children aged approximately 4-6 who would are beginning to learn how to spell small words and enjoy guessing challenges. It is based loosely on the popular NYTimes 5-letter word guessing game called 'Wordle'. In 'Focal', players must use the clue image to guess what 3-letter word needs to be spelled and then they have three chances to spell it. The title 'Focal' refers to the Irish word for 'word' and so is a good play on 'Wordle'.  
 <br>
 
 ![Focal represented on different devices](documents/focal-am-i-responsive.png)
@@ -36,7 +36,7 @@ Focal is a fun interactive game for children aged approximately 4-6 who would ar
         * [Lighthouse](#lighthouse)
     * [Manual Testing](#manual-testing)
         * [Testing User Stories](#testing-user-stories)
-        * [Full Testing](#full-testing)
+        * [Further Testing](#full-testing)
 * [Bugs](#bugs)
     * [Known Bugs](#known-bugs)
     * [Solved Bugs](#solved-bugs)
@@ -55,9 +55,10 @@ ___
 
 <br>
 
-To help young children, aged circa 3-6 years old with their spelling by providing a simple and engaging game.  The game was designed with my own early school age child's needs in mind. He is currently learning to sound out and spell small words and so I wanted to create something that he could use to make his learning more fun and interactive.
+To help young children, aged circa 3-6 years old with their spelling by providing a simple and engaging game.  The game was designed with my own early school age child's needs in mind. He is currently learning to sound out and spell small words and so I wanted to create something that he could use to make his learning more fun and interactive. It is informed by the written materials his school uses to teach the children their first words. 
  
 Similar to the NYTimes's popular Wordle game, Focal guides the user towards the solution by displaying a green colour block on the game grid if the user has placed the correct letter in the correct place, an orange block if a correct letter has been chosen but put in the wrong place, and a red block if the letter does not feature in the word. 
+It is designed to be played along with with full or partial supervision by a child's parents, much in the way homework is overseen by parents.
 
 <br>
 
@@ -300,7 +301,7 @@ HTML, CSS and JavaScript were used to create the game.
 * Google Developer Tools - Used throughout build of website for debugging, checking responsiveness and trialing new features/ styling.
 * Google Lighthouse - Used at testing stage to show statistics for performance, accessibility,  best practices and SEO.
 * Am I Responsive? - For displaying images of how the website looks across a range of devices.
-* Favicon.ico & App Icon Generator - for creating the 16x16px ico favicon.
+
 
 <br>
 
@@ -363,19 +364,21 @@ The live link can be found [here](https://#)
 
 <br>
 
-I used the [W3C](https://validator.w3.org/) Markup Validation Service to validate the index.html and 404.html page.  They passed with no errors or warnings:
+I used the [W3C](https://validator.w3.org/) Markup Validation Service to validate the index.html page. It returned one warning: "Warning: The type attribute is unnecessary for JavaScript resources." After some research I learned that this is a problem that stems directly from the developer of the Bootstrap code that allows the pop-up modal to function. Unfortunately I could not find a solution that allows the rest of my code to function unhindered. See discussion: [W3C Validator error discussion on Wordpress](https://wordpress.org/support/topic/how-to-remove-unnecessary-type-attribute-for-javascript/)
 
-![html validator pass](documents/w3c-focal-validated.png)
+![html validator pass](documents/w3-validator-warning.png)
 
 <br>
 
 I used the [W3C jigsaw](https://jigsaw.w3.org/css-validator/) CSS Validation Service to validate my CSS stylesheet. It passed with no errors:
 
+![css validator pass](documents/w3c-validator-pass.png)
+
 ![css validator pass](docs/testing/w3c/w3c-jigsaw-css-validated.png)
 
 The following warnings were raised, which relate to the vendor extensions I am using for browser cross compatibility:
 
-![css validator warnings](docs/testing/w3c/focal-w3c-jigsaw-css-warnings.png)
+
 
 <br>
 
@@ -520,7 +523,7 @@ I realised this was because the grid template rows value I was using for the cla
 
 # **Credits**
 
-
+* I used this [https://www.youtube.com/watch?v=j7OhcuZQ-q8] tutorial by Ian Linehan to sketch out the basic structure of game. 
 * The readme used as a guiding template was from for Spelling Bee Scramble Game: [Wawas woods](https://github.com/E#). In addition, instructions on how to fork a repository were quoted from this readme. 
 * [Referenced this article on Stack Overflow for solution to how setting difficulty level changes which object the random word is chosen from](https://stackoverflow.com/questions/64712803/change-game-difficulty-javascript)
 * [Referenced this tutorial on YouTube on how to build a Wordle Clone](https://www.youtube.com/watch?v=4-s3g_fU7Vg)
@@ -550,14 +553,3 @@ Brioni Connolly 2023.
 [Back to top](<#contents>)
 
 
-<br>
-
-![Focal spelling game represented on different devices](docs/devices/focal-am-i-responsive.png)
-
-<br>
-
-[View the Focal site on GitHub Pages](https://rkillickdev.github.io/spelling-bee-scramble/)
-
-<br>
-
-> Written with [StackEdit](https://stackedit.io/).

@@ -12,7 +12,7 @@
     <!-- Animate Css link -->
     <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Google fonts here -->
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
@@ -32,7 +32,7 @@
                     <button type="button" class ="close-modal" data-dismiss = "modal">&times;</button>
                 </div>
                 <div id = "beehive-image" class = "center-align">
-                <img src = "assets/images/beehive-icon.png" width = "50px" height="50px" alt = "beehive image" />
+                <img src = "assets/images/beehive-icon.png" width = "50" height="50" alt = "beehive image">
                 </div>
                 <div class = "modal-body">
                     <p>You have <i class="fa-solid fa-3"></i> chances to spell each <i class="fa-solid fa-3"></i> letter word!</p>
@@ -40,7 +40,7 @@
                     <p>An <span style="color:orange">ORANGE</span> box means that you have the right letter, but it's in the wrong place!</p>
                     <p>Use <span style="color:#000000"><i class="fa-solid fa-arrows-rotate"></i></span> to generate a new word!</p>
                     <div class = "center-align">
-                        <img src = "assets/images/laugh-icon.png" width = "50px" height="50px" alt = "hello image" />
+                        <img src = "assets/images/laugh-icon.png" width = "50" height="50" alt = "hello image">
                     </div>
                     <p class = "center-align">Have fun learning!</p>
                 </div>
@@ -99,7 +99,7 @@
             <button data-key="p">p</button>
             <button data-key="q">q</button>
             <button data-key="r">r</button>  
-            <button data-key="del" class="wide-button"><i id = "pointer-event delete-button" class="fa-solid fa-delete-left"></i></button>
+            <button data-key="del" class="wide-button"><i id = "pointer-event" class="fa-solid fa-delete-left"></i></button>
         </div>
 
         <div class= "keyboard-row">
@@ -117,27 +117,27 @@
     </div>
 
         <div class ="nav-buttons"> 
-            <button class = "btn big-btn"id= "start-new-game"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button class = "btn big-btn" id= "start-new-game"><i class="fa-solid fa-arrows-rotate"></i></button>
            
         </div> 
     </div>
- </div>
 
-</div>
 
     
-<script src = "assets/js/script.js"></script>  
-<script src = "assets/js/words.js"></script>  
-<!-- These links are to allow the modal to open at page load using Bootstrap.modal("show") method -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-</script>
-<script type="text/javascript">
+    <script src = "assets/js/script.js"></script>  
+    <script src = "assets/js/words.js"></script>  
+    <!-- These links are to allow the modal to open at page load using Bootstrap.modal("show") method -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <!-- This will throw an error with the W3 validator as 'type' is not necessary: message will read:
+     Warning: The type attribute is unnecessary for JavaScript resources. Could not find a solution to this that allows code to function unhindered -->
+    <script type="text/javascript">
     $(window).on('load', function() {
         $('#myModal').modal('show');
     });

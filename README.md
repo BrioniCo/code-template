@@ -513,6 +513,7 @@ This is how you clone a project from GitHub:
 # **Credits**
 
 * I used this [https://www.youtube.com/watch?v=j7OhcuZQ-q8] tutorial by Ian Lenihan to sketch out the basic structure of game. 
+* I referenced this tutorial by Ania Kubow [Wordle Clone](https://www.youtube.com/watch?v=mpby4HiElek&t=2565s)
 * This tutorial was also used as reference [How to build a Wordle Clone](https://www.youtube.com/watch?v=4-s3g_fU7Vg)
 * Referenced this [YouTube](https://www.youtube.com/@KevinPowell) when considering how to make the site responsive without having to use too many media queries.
 * To create the instructions modal, I used some code from this tutorial: [Bootstrap modal Tutorial Republic](https://www.tutorialrepublic.com/faq/how-to-launch-bootstrap-modal-on-page-load.php) and this tutorial: [Modal, Free Code Camp](https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/)

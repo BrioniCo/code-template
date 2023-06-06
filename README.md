@@ -1,9 +1,10 @@
 # **'Focal' Spelling Game**
 
-Focal is a fun interactive game for children aged approximately 4-6 who would are beginning to learn how to spell small words and enjoy guessing challenges. It is based loosely on the popular NYTimes 5-letter word guessing game called 'Wordle'. In 'Focal', players must use the clue image to guess what 3-letter word needs to be spelled and then they have three chances to spell it. The title 'Focal' refers to the Irish word for 'word' and so is a good play on 'Wordle'.  
+Focal is a fun interactive game for children aged approximately 4-6 who would are beginning to learn how to spell small words and enjoy guessing challenges. It is based loosely on the popular NYTimes 5-letter word guessing game called 'Wordle'. In 'Focal', players must use the clue image to guess what 3-letter word needs to be spelled and then they have three chances to spell it. The title 'Focal' refers to the Irish word for 'word'.
+
 <br>
 
-![Focal represented on different devices](documents/focal-am-i-responsive.png)
+![Focal represented on different devices](documentation/focal-am-i-responsive.png)
 
 <br>
 
@@ -26,9 +27,6 @@ Focal is a fun interactive game for children aged approximately 4-6 who would ar
 * [Technologies Used](#technologies-used)
     * [Languages Used](#languages-used)
     * [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
-* [Deployment and Local Development](#deployment-and-local-development)
-    * [How to Fork](#how-to-fork)
-    * [How to Clone](#how-to-clone)
 * [Testing](#testing)
     * [Automated Testing](#automated-testing)
         * [W3C Validator](#w3c-validator)
@@ -40,6 +38,7 @@ Focal is a fun interactive game for children aged approximately 4-6 who would ar
 * [Bugs](#bugs)
     * [Known Bugs](#known-bugs)
     * [Solved Bugs](#solved-bugs)
+* [Deployment](#deployment) 
 * [Credits](#credits)
     * [Code Used](#code-used)
     * [Content](#content)
@@ -55,10 +54,10 @@ ___
 
 <br>
 
-To help young children, aged circa 3-6 years old with their spelling by providing a simple and engaging game.  The game was designed with my own early school age child's needs in mind. He is currently learning to sound out and spell small words and so I wanted to create something that he could use to make his learning more fun and interactive. It is informed by the written materials his school uses to teach the children their first words. 
+To help young children, aged circa 3-6 years old with their spelling by providing a simple and engaging game. The game was designed with the developer's own early school age child's learning in mind. The developer set out to create the game as a fun and interactive learning tool. It is informed by the learning materials used by schools at Junior infants and Senior infants level. 
  
 Similar to the NYTimes's popular Wordle game, Focal guides the user towards the solution by displaying a green colour block on the game grid if the user has placed the correct letter in the correct place, an orange block if a correct letter has been chosen but put in the wrong place, and a red block if the letter does not feature in the word. 
-It is designed to be played along with with full or partial supervision by a child's parents, much in the way homework is overseen by parents.
+It is designed to be played along with full or partial supervision by a child's parents, much in the way homework is overseen by parents. Apart from the pop-up messages, there is a minimal amount of text to make it easy for children to navigate through the game. 
 
 <br>
 
@@ -70,16 +69,13 @@ It is designed to be played along with with full or partial supervision by a chi
 
 <br>
 
-* * As a visitor, I want a fun and engaging educational experience that helps with my spelling.
+* As a visitor, I want a fun and engaging educational experience that helps with my spelling.
 * As a visitor, I want to be engaged and encouraged to hit certain spelling targets to keep the experience interesting and challenging.
 * As a visitor, I need the game to be responsive over a range of device sizes.
 * As a visitor, I want to be able to keep track of my incorrect and correct guesses. 
 * As a visitor, I want clear and concise feedback each time I submit a correct or incorrect answer.
 *  As a visitor, I want easy intuitive access to an explanation of how to play the game.
-
-[* As a first time visitor, I am looking for a fun and interactive way to practice and improve my spelling.
-* As a first time visitor, I want clear feedback about how close I am to reaching my target number of correct answers.
-* As a first time visitor, I want clear feedback to let me know I have completed the challenge and how to proceed.]
+* As a visitor I want to be greeted by game that looks like it has been designed with me in mind. 
 
 <br>
 
@@ -90,16 +86,13 @@ ___
 
 <br>
 
-I used a mobile first approach when planning for this project...
+The wireframes for Focal were produced in [Figma](https://figma.com) and were designed with a mobile-first approach in mind. 
+Please note that the final site varies slightly from the wireframes. As the learning process developed, so too did the look of the site.
+There are some features that were conceptualised at this point but were not implemented due to time and current skill constraints. These have been added to the [Future Implementations](#future-implementations) section below.
 
 <br>
 
-![Mobile wireframe for...](docs/wireframes/#.png)
-
-<br>
-
-The wireframe above shows how the game was conceptualized, but....
-These have been added to the [Future Implementations](#future-implementations) section below.
+![Mobile wireframe for...](documentation/wireframe-focal.png)
 
 <br>
 
@@ -107,44 +100,62 @@ These have been added to the [Future Implementations](#future-implementations) s
 
 <br>
 
-### **Navigation Bar:**
-
-<br>
-
-![Navigation Bar](docs/features/focal-nav-bar.png)
-
-The game is designed for simplicity of navigation and so the only navigation option is to the home by clicking the page title. This ensures that it is possible for young children to play the game without much knowledge of how words are spelt. 
-
-[[Add this back in if you end up including a clickable modal to reopen instructions page! -Clicking on the information icon presents the player with instructions on how to play the game.  The page can be hidden by re-clicking the information icon or clicking the cross icon.]]
-
-<br>
-
 ### **Game Instructions Modal:**
 
 <br>
 
-![Instructions Modal](docs/features/focal-landing-modal.png)
+![Welcome instructions page](documentation/welcome-instructions.png)
 
-On loading the site, players are greeted with a modal that explains  how the game should be played. This modal pops up automatically at page load using the Bootstrap method and JQuery. 
+Once the user loads the page they are greeted by a pop-up modal that explains the game's simple instructions. 
+This is similar to how the NYTimes present their instructions for 'Wordle' and was directly inspired by this. [NYTimes Wordle welcome page](https://www.nytimes.com/games/wordle/index.html). This modal uses the Bootstrap method to pop-up at page load. 
 
-<br>
+The instructions contain fun and bright images that communicate that the game is designed for children. There is a reference to the well-known 'spelling bee' game in the image of the beehive. 
 
-### **Another Feature:**
-
-<br>
-
-![#](docs/features/focal#.png)
+The background is blurred out by an overlay while the instructions modal is visible which is aesthetically pleasant. This modal can be closed by clicking on the 'x' on the top right corner of the modal box. 
 
 <br>
 
-The player is presented with an image that provides the user with a clue to what 3-letter word needs to be spelt. The user must guess the word and spell it correctly by clicking on each letter in the right order.  
-Once the player is happy with their spelling of the word, they can submit their answer with the 'enter' button.  This is then checked against the correct spelling of the word and the player is provided feedback. The boxes bounce and each turns a particular colour. The colour green means ....., the colour orange means and the colour red means that none of the letters are in the word. 
-If the player answer matches, all squares turn green and the score is incremented by 1.  A new scrambled word is then generated and the answer boxes are cleared, ready for the next spelling attempt.
-The wrong answer span is only incremented by 1 when all 3 tries to spell the word have been used up, so that young children are not disheartened by the existence of too many red X's. 
+![modal overlay](documentation/modal-overlay.png)
 
-![Correct answer submitted](documents/#.jpg)
+<br>
 
+### **Gameboard and Image:**
+
+<br>
+
+![Gameboard and clue image](documentation/gameboard-and-image.png)
+
+<br>
+
+The gameboard is where the player inputs letters to spell the 3-letter word they think the image represents. 
+The three columns of the grid represent the three guesses that the player has. The board was created using flex box to negate the need for too many media queries.
+The clue images are clear and fun and some represent the word to be spelled more directly than others, which adds to the guessing component of the game.
+There are two images put in the shuffle for fun; images to represent 'poo' and 'pee'. As anyone with a child is all too aware, toilet humour is their absolute favourite humour and so the existence of these adds an additional element of delight. 
+
+The user must guess the word and spell it correctly by clicking on each letter in the right order.  
+Once the player is happy with their spelling of the word, they can submit their answer with the 'enter' button. This is then checked against the correct spelling of the word and the player is provided feedback. The boxes bounce using an imported animation from [CSS animate](https://animate.style/) and each turns a particular colour. 
+<br>
+The colour green means that the right letter has been placed in the right spot, the colour orange means a correct letter has been chosen but it is in the wrong spot and the colour red means that the letter is not in the word. 
+If the player's answer matches, all squares turn green and the score is incremented by 1. 
+<br>
+
+### **Keyboard:**
+
+![Keyboard](documentation/keyboard.png)
+
+The onscreen keyboard introduces the child user to the concept of a keyboard layout but is set in alphabetic order so that it is not too difficult for younger users to locate letters. The 'enter' button has been made to stand out by colouring it green.
+<br>
+
+![Green 'enter' button](documentation/enter.png)
+
+<br>
+
+ This button is used to submit the guessed word. It is coloured brightly and in keeping with the colour palette used in the rainbow coloured game title. There is a subtle hover effect added to the keys; the letters shift to the same pink that features on the game board and the title on a cursor hover. 
+
+<br>
 If the user's answer is incorrect, all squares turn red.
+A new scrambled word is then generated and the answer boxes are cleared, ready for the next spelling attempt.
+The wrong answer span is only incremented by 1 when all 3 tries to spell the word have been used up, so that young children are not disheartened by the existence of too many red X's. 
 
 ![Incorrect answer submitted](.jpg)
 
@@ -153,14 +164,14 @@ On the keyboard, the delete key gives the player the opportunity to delete unche
 ![Clear answer](docs/features/gifs/spelling-bee-clear-answer.gif)
 
 <br>
+The game is designed for simplicity of navigation and so the only navigation option is to generate a new word. This ensures that it is possible for young children to play the game without much knowledge of how words are spelt. 
 
-### **Keyboard:**
+
 
 <br>
 
 ![#](.jpg)
 
-Introduces child to concept of keyboard layout but set in alphabetic order so that it is not too difficult for younger users to locate letters. 
 
 <br>
 
@@ -197,24 +208,15 @@ The styling of the recycle word button is consistent with the rest of the game a
 
 <br>
 
-
-
-
-
-<br>
-
 ### **Feature Eile:**
 
 <br>
 
-Maybe include this- flex grow etc- set heights and widths were avoided and flex used throughout instead. 
-Keyboard and Gameboard tiles have been made responsive so they get larger as the screen width increases, but also remain square.
+
 
 ![#](docs/#.png)
 
 <br>
-
-When testing the game on smaller devices such as phones, I noticed that game play was less user friendly when the device was rotated to landscape orientation, as the player is not able to view all the necessary elements of score/ timer, answer boxes, picture, scramble boxes and controls without scrolling up and down.  I considered using a media query to shrink everything to fit the screen in these situations or removing some elements, but none of these solutions were workable as there is too much information to fit in that space.  
 
 ![#](docs/#.jpg)
 
@@ -292,6 +294,7 @@ HTML, CSS and JavaScript were used to create the game.
 
 <br>
 
+[CSS animate](https://animate.style/)
 * Git -  Version control.
 * GitHub - All files for the website stored and saved in a repository.
 * GitHub Pages - Used to deploy the final version of the website.
@@ -302,55 +305,6 @@ HTML, CSS and JavaScript were used to create the game.
 * Google Lighthouse - Used at testing stage to show statistics for performance, accessibility,  best practices and SEO.
 * Am I Responsive? - For displaying images of how the website looks across a range of devices.
 
-
-<br>
-
-# **Deployment and Local Development**
-
-<br> 
-
-## **Deployment**
-
-<br>
-
-The live website has been deployed using GitHub Pages, following the steps below:
-
-1. Log in (or sign up) to GitHub.
-2. Click on the required repository, in this case: brioniCo/focal
-3. Go to the "Settings" menu.
-4. Select the "Pages" tab in the left hand menu - this will jump you to a section called "GitHub Pages".
-5. Under the Build and deployment section, select "main" from the select branch menu.  Select "root" from the dropdown select folder menu.
-6. Click save.  The URL for your live site which has been deployed on GitHub pages is shown at the top of the GitHub pages section.  This sometimes does not display immediately or may require a browser refresh.
-
-The live link can be found [here](https://#)
-
-<br>
-
-## **Local Development**
-
-<br>
-
-### **How to fork:**
-
-<br>
-
-1. Log in (or sign up) to GitHub.
-2. Find the required repository, in this case: brioniCo/spelling-bee-scramble
-3. Click on the "fork" button at the top right of the page.
-
-<br>
-
-### **How to clone:**
-
-<br>
-
-1. Log in (or sign up) to GitHub.
-2. Find the required repository, in this case: brioniCo/focal.
-3. Click on the green code button.  This will give you the choice of cloning the repository using HTTPS, an SSH key or GitHub CLI.  Make your selection and copy the provided URL link.
-4. Open Terminal
-5. Change the current working directory to the location where you want the cloned directory.
-6. Type 'git clone' and then paste the URL you copied earlier.
-7. Press enter.
 
 <br>
 
@@ -415,7 +369,7 @@ I used Lighthouse within Google Chrome developer tools as a way of testing perfo
 
 <br>
 
-![mobile index.html page results](documents/focal-lighthouse-mobile.png)
+![mobile index.html page results](documentation/focal-lighthouse-mobile.png)
 
 <br>
 
@@ -520,6 +474,49 @@ ___
 I realised this was because the grid template rows value I was using for the class grid-settings-table was set to repeat(3, 1fr). This problem was only showing itself on an ipad.  After some research, I found that using repeat(3, min-content) displayed the settings grid as I wanted and solved the bug.
 
 <br>
+
+# Deployment
+
+## **To deploy the project**
+
+The site was deployed to GitHub pages. The steps to deploy a site are as follows:
+
+1. It is important to first ensure that you have commited and pushed any recent changes in your gitpod.io workspace, do this first by typing: *git add .* then press *return* in the terminal window, followed by *git commit -m "ADD NOTES HERE"*, press *return* and, finally *git push*. You are now ready to deploy. 
+2. Open GitHub and from the menu on the left, choose your repository. 
+3. In the GitHub repository, navigate to the **Settings** tab on the top right corner.
+
+4. Once in Settings, navigate to the **Pages** tab on the left hand side.
+
+5. Scroll to **Source**, select the branch **main**, then click save. 
+
+![Github deployed image](documentation/deployed-page-link.png)
+
+6. The page should refresh. You may need to manually refresh a few times. As you can see from the image above, your deployed site address should display across a ribbon display. 
+
+**Note**: For my first deployment, I needed to choose a Jekyll theme in order to have my site deployed. Github has instructions for this eventuality : [GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll)
+ 
+The live link to the Github repository can be found here - [Github repo](https://brionico.github.io/focalpp2/)
+
+## **To fork the repository on GitHub**
+
+A copy of the GitHub Repository can be made by forking the GitHub account. This copy can be viewed and changes can be made to the copy without affecting the original repository. These are the steps that should be followed to fork the repository: 
+
+1. Log in to **GitHub** and locate the [repository](https://brionico.github.io/focalpp2/).
+2. On the right hand side of the page inline with the repository name is a button called **'Fork'**, click on the button to create a copy of the original repository in your GitHub Account.
+
+ (Note that this approach was not utilised by the developer for this project due to an initial lack of understanding/reluctance about embarking on the process);
+
+## **To create a local clone of this project**
+This is how you clone a project from GitHub:
+
+1. Under the repository’s name, click on the **code** tab.
+2. In the **HTTPS** section, under **local** click on the two squares icon to copy the given URL or else use *right-click_copy* or *command* + *C* for Mac, or *Ctrl* + *C* for PC. 
+
+3. Open your terminal in the work space you would like the repository cloned to. 
+4. Type **git clone** and then paste the URL you have copied from GitHub.
+5. Press *enter* and the local clone will have been created. 
+
+[Back to top](<#contents>)
 
 # **Credits**
 
